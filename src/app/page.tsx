@@ -4,7 +4,9 @@ import Image from "next/image";
 import heroImg from "../../public/assets/rumah-img.jpg";
 import Link from "next/link";
 import Masonry from "../components/layout/Masonry";
-import { motion, easeInOut } from "framer-motion";
+import { motion, easeInOut, AnimatePresence } from "framer-motion";
+import { FaArrowRight, FaStop, FaPlay } from "react-icons/fa";
+import { useState, useRef } from "react";
 
 const Map = dynamic(() => import("../components/ui/Maps"), {
   ssr: false,
@@ -16,18 +18,39 @@ const Map = dynamic(() => import("../components/ui/Maps"), {
 });
 
 export default function Home() {
-  // Animation Variants
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handlePlay = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+      setIsPlaying(true);
+    }
+  };
+
+  const handleStop = () => {
+    if (videoRef.current) {
+      videoRef.current.pause();
+      videoRef.current.currentTime = 0; // Reset to start
+      setIsPlaying(false);
+    }
+  };
+
   const fadeInUp = {
     hidden: { opacity: 0, y: 40 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: easeInOut } }
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: easeInOut },
+    },
   };
 
   const staggerContainer = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.2 }
-    }
+      transition: { staggerChildren: 0.2 },
+    },
   };
 
   return (
@@ -167,6 +190,153 @@ export default function Home() {
             />
           </motion.div>
         </div>
+      </section>
+
+      <section className="py-24 px-4 md:px-8 bg-[#F6F6EC] border-t border-zinc-200">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="flex flex-col md:flex-row justify-between items-center mb-16 gap-6"
+          >
+            <div className="border-l-4 border-[#C9A051] pl-6">
+              <h2 className="text-4xl md:text-6xl font-bold tracking-tighter uppercase leading-none">
+                Events highlight.
+              </h2>
+              <p className="text-zinc-500 mt-4 text-xs font-light tracking-[0.4em] uppercase">
+                Don&apos;t Miss the Legacy
+              </p>
+            </div>
+            <Link
+              href="/event"
+              className="group flex items-center gap-3 text-sm font-bold uppercase tracking-widest border-b-2 border-black pb-1 hover:text-[#C9A051] hover:border-[#C9A051] transition-all"
+            >
+              View All Events
+              <span className="group-hover:translate-x-2 transition-transform">
+                <FaArrowRight />
+              </span>
+            </Link>
+          </motion.div>
+
+          {/* Event List Teaser */}
+          <div className="flex flex-col">
+            {[
+              {
+                id: "1",
+                title: "Pasar Bandeng Festive",
+                date: "MAY 15, 2026",
+                category: "Tradition",
+                desc: "The legendary annual fish auction and culinary bazaar.",
+              },
+              {
+                id: "2",
+                title: "MTN Lab Residency",
+                date: "SEP 01, 2025",
+                category: "Art & Culture",
+                desc: "A creative laboratory for national and local artists.",
+              },
+            ].map((event, idx) => (
+              <motion.div
+                key={event.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1 }}
+                className="group relative border-b border-zinc-300 py-10 flex flex-col md:flex-row md:items-center justify-between gap-6"
+              >
+                <div className="absolute inset-0 bg-[#C9A051]/5 scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500" />
+
+                <div className="relative z-10 flex flex-col md:flex-row md:items-center gap-8 grow">
+                  <div className="min-w-30">
+                    <p className="text-[#C9A051] text-xs font-bold tracking-widest mb-1">
+                      {event.category}
+                    </p>
+                    <p className="text-zinc-400 text-sm font-medium">
+                      {event.date}
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl md:text-3xl font-bold tracking-tight group-hover:pl-4 transition-all duration-300">
+                      {event.title}
+                    </h3>
+                    <p className="text-zinc-500 text-sm font-light mt-1 md:mt-0 md:opacity-0 group-hover:opacity-100 group-hover:pl-4 transition-all duration-500">
+                      {event.desc}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="group relative h-[70vh] w-full overflow-hidden bg-black">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1.5 }}
+          viewport={{ once: true }}
+          className="absolute inset-0 z-0"
+        >
+          <video
+            ref={videoRef}
+            loop
+            muted
+            playsInline
+            className={`h-full w-full object-cover transition-all duration-1000 ${
+              isPlaying ? "opacity-100 grayscale-0" : "opacity-60 grayscale"
+            }`}
+          >
+            <source src="/assets/vid_example.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </motion.div>
+
+        <AnimatePresence>
+          {isPlaying && (
+            <motion.button
+              initial={{ opacity: 0 }}
+              whileHover={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={handleStop}
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 h-20 w-20 rounded-full bg-black/40 backdrop-blur-md flex items-center justify-center text-white opacity-0 transition-opacity duration-300 border border-white/20 hover:bg-[#C9A051] hover:border-[#C9A051]"
+            >
+              <FaStop className="text-2xl" />
+            </motion.button>
+          )}
+        </AnimatePresence>
+
+        <AnimatePresence>
+          {!isPlaying && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0, y: 20 }}
+              transition={{ duration: 0.5 }}
+              className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center"
+            >
+              <div className="space-y-6">
+                <h3 className="text-xs font-bold uppercase tracking-[0.5em] text-[#C9A051]">
+                  Experience the Atmosphere
+                </h3>
+                <h2 className="text-4xl md:text-6xl font-bold tracking-tighter text-white uppercase leading-none">
+                  A Visual Journey <br />
+                  <span className="italic font-light">Through Time</span>
+                </h2>
+
+                <motion.button
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.9 }}
+                  onClick={handlePlay}
+                  className="group relative flex items-center justify-center mx-auto mt-8 h-20 w-20 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm transition-colors hover:bg-[#C9A051] hover:border-[#C9A051]"
+                >
+                  <FaPlay className="text-2xl pl-1 text-white" />
+                </motion.button>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </section>
 
       <Masonry />
