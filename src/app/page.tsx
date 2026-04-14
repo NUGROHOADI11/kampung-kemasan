@@ -31,7 +31,7 @@ export default function Home() {
   const handleStop = () => {
     if (videoRef.current) {
       videoRef.current.pause();
-      videoRef.current.currentTime = 0; // Reset to start
+      videoRef.current.currentTime = 0;
       setIsPlaying(false);
     }
   };
@@ -55,7 +55,6 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-[#F6F6EC] overflow-x-hidden">
-      {/* Hero Section with Entrance Animation */}
       <div className="h-[95vh] w-full relative overflow-hidden">
         <motion.div
           initial={{ scale: 1.1, opacity: 0 }}
@@ -106,7 +105,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Feature Section - Staggered Reveal */}
       <motion.section
         variants={staggerContainer}
         initial="hidden"
@@ -288,7 +286,7 @@ export default function Home() {
               isPlaying ? "opacity-100 grayscale-0" : "opacity-60 grayscale"
             }`}
           >
-            <source src="/assets/vid_example.mp4" type="video/mp4" />
+            <source src="/assets/vid-example.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </motion.div>
