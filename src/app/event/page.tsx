@@ -5,8 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 import heroImg from "../../../public/assets/hero-img.jpg";
 import { FaArrowRight } from "react-icons/fa";
+import "../../i18n";
+import { useTranslation } from "react-i18next";
 
 export default function EventPage() {
+  const { t } = useTranslation();
+
   const annualEvents = [
     {
       title: "Pasar Bandeng Festive",
@@ -30,10 +34,10 @@ export default function EventPage() {
       <section className="pt-20 px-4 md:px-8 max-w-7xl mx-auto mb-20">
         <div className="border-l-8 border-black pl-6">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tighter uppercase leading-none">
-            Events.
+            {t("events.title")}
           </h1>
           <p className="text-zinc-500 mt-4 text-sm font-light tracking-[0.4em] uppercase">
-            Celebrating Heritage, Trade, and Art
+            {t("events.subtitle")}
           </p>
         </div>
       </section>

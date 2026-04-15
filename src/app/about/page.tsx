@@ -6,8 +6,11 @@ import aboutImg from "../../../public/assets/about-img.png";
 import headImg from "../../../public/assets/rumah-img.jpg";
 import { FaChevronRight } from "react-icons/fa";
 import Link from "next/link";
+import "../../i18n";
+import { useTranslation } from "react-i18next";
 
 export default function AboutPage() {
+  const { t } = useTranslation();
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
     visible: {
@@ -36,10 +39,10 @@ export default function AboutPage() {
           className="mb-8 border-l-8 border-black pl-6"
         >
           <h1 className="text-3xl md:text-4xl font-bold tracking-tighter uppercase leading-tight">
-            The Story of <br /> Kampung Kemasan
+            {t("about.story_title")}
           </h1>
           <p className="text-gray-500 mt-4 text-sm font-light tracking-[0.3em] uppercase">
-            Gresik&apos;s Historical Gold Standard
+            {t("about.story_subtitle")}
           </p>
         </motion.div>
 
@@ -69,8 +72,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-5 gap-12">
             <motion.div variants={fadeInUp} className="md:col-span-3">
               <h2 className="text-3xl md:text-4xl font-medium leading-tight text-zinc-900">
-                A neighborhood historically tied to the gold merchants of
-                Gresik, blending wealth with timeless architecture.
+                {t("about.intro_text")}
               </h2>
             </motion.div>
             <motion.div
@@ -78,15 +80,10 @@ export default function AboutPage() {
               className="md:col-span-2 flex flex-col justify-end"
             >
               <p className="text-gray-600 leading-relaxed text-lg italic border-b border-zinc-200 pb-6">
-                &quot;Unlike many historical districts lost to modernization,
-                Kampung Kemasan survived thanks to community awareness and
-                preservation efforts.&quot;
+                {t("about.quote")}
               </p>
               <p className="text-zinc-500 mt-6 leading-relaxed">
-                In the late 1800s, successful traders built luxurious residences
-                here, reflecting their status through a mix of Dutch colonial
-                techniques, Chinese Peranakan details, and Javanese
-                craftsmanship.
+                {t("about.history_detail")}
               </p>
             </motion.div>
           </div>
@@ -122,8 +119,8 @@ export default function AboutPage() {
                   <li key={i}>
                     <strong className="block text-zinc-900">{item}</strong>
                     <span className="text-sm">
-                      Historical details that define the unique Kemasan
-                      aesthetic.
+                        Historical details that define the unique Kemasan
+                        aesthetic.
                     </span>
                   </li>
                 ))}
@@ -138,12 +135,11 @@ export default function AboutPage() {
               <h3 className="text-xs font-bold uppercase tracking-widest text-zinc-200 mb-4">
                 02. Goals
               </h3>
-              <h4 className="text-xl font-bold mb-2 text-white">Our Vision</h4>
+              <h4 className="text-xl font-bold mb-2 text-white">{t("about.vision_title")}</h4>
               <p className="text-zinc-200 text-sm leading-relaxed mb-6">
-                To preserve Kampung Kemasan as a symbol of multicultural
-                harmony.
+                {t("about.vision_desc")}
               </p>
-              <h4 className="text-xl font-bold mb-2 text-white">Our Mission</h4>
+              <h4 className="text-xl font-bold mb-2 text-white">{t("about.mission_title")}</h4>
               <ul className="space-y-1 text-zinc-200 text-sm italic">
                 <li>— Protect historical architecture</li>
                 <li>— Educate future generations</li>

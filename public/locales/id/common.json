@@ -1,0 +1,79 @@
+{
+  "navbar": {
+    "home": "Beranda",
+    "gallery": "Arsip",
+    "event": "Acara",
+    "about": "Tentang",
+    "contact": "Kontak",
+    "language": "Bahasa"
+  },
+  "hero": {
+    "est": "EST. 1855",
+    "title": "Jelajahi Warisan",
+    "subtitle": "Kampung Kemasan",
+    "tagline": "Di Mana Sejarah Hidup di Setiap Sudut"
+  },
+  "gallery": {
+    "title": "Galeri",
+    "subtitle": "Menangkap Esensi Kampung Kemasan",
+    "description": "Dari arsitektur yang megah hingga kehidupan sehari-hari, jelajahi koleksi foto yang merayakan keindahan dan warisan budaya Kampung Kemasan."
+  },
+  "features": {
+    "architecture_title": "Arsitektur Unik",
+    "architecture_desc": "Terkenal dengan rumah-rumah megah milik saudagar kaya. Perpaduan struktur Belanda, ukiran Tiongkok, dan konsep ruang Jawa.",
+    "history_title": "Nilai Historis",
+    "history_desc": "Berkembang sebagai pemukiman pedagang sukses saat Gresik menjadi pelabuhan dagang internasional utama di era Belanda.",
+    "photography_title": "Surga Fotografi",
+    "photography_desc": "Fasad berwarna hijau dan pirus yang cerah dengan jendela simetris memberikan latar sempurna untuk fotografi budaya."
+  },
+  "narrative": {
+    "title": "Bukan sekadar bangunan tua, melainkan warisan yang hidup.",
+    "description": "Terletak di Jawa Timur, Kampung Kemasan adalah pusaka budaya yang merefleksikan berabad-abad perdagangan dan tradisi.",
+    "cta": "Pelajari Selengkapnya"
+  },
+  "about": {
+    "story_title": "Kisah Kampung Kemasan",
+    "story_subtitle": "Standar Emas Sejarah Gresik",
+    "intro_text": "Sebuah kawasan yang secara historis terikat dengan saudagar emas Gresik, memadukan kekayaan dengan arsitektur abadi.",
+    "quote": "Berbeda dengan banyak distrik bersejarah yang hilang karena modernisasi, Kampung Kemasan bertahan berkat kesadaran komunitas.",
+    "history_detail": "Pada akhir 1800-an, pedagang sukses membangun kediaman mewah di sini, mencerminkan status mereka melalui teknik kolonial Belanda dan detail Peranakan.",
+    "highlights_title": "Sorotan Arsitektur",
+    "vision_title": "Visi Kami",
+    "vision_desc": "Melestarikan Kampung Kemasan sebagai simbol harmoni multikultural dan kebanggaan sejarah di Gresik.",
+    "mission_title": "Misi Kami",
+    "harmony_title": "Harmoni Budaya",
+    "harmony_desc": "Koeksistensi damai antara komunitas Jawa, saudagar Tionghoa Peranakan, dan pengaruh kolonial Belanda.",
+    "action_title": "Upaya Pelestarian",
+    "action_desc": "Pemerintah setempat dan aktivis budaya bekerja sama memulihkan fasad yang rusak dan menjaga elemen desain asli."
+  },
+  "events": {
+    "title": "Acara Tahunan",
+    "subtitle": "Merayakan Warisan, Perdagangan, dan Seni",
+    "pasar_bandeng": "Pasar Bandeng Festive",
+    "badoghan": "Festival Badoghan",
+    "mtn_lab": "MTN Lab: Ruang Talenta",
+    "mtn_desc": "Diinisiasi oleh Kementerian Kebudayaan, program ini menjadikan Kampung Kemasan laboratorium kreatif bagi seniman muda.",
+    "cta_register": "Daftar Acara"
+  },
+  "contact": {
+    "title": "Hubungi Kami",
+    "subtitle": "Kolaborasi & Pertanyaan",
+    "address_label": "Alamat",
+    "digital_label": "Digital",
+    "social_label": "Sosial Media",
+    "contact_label": "Kontak",
+    "form_name": "Nama Lengkap",
+    "form_email": "Alamat Email",
+    "form_message": "Pesan Anda",
+    "form_submit": "Kirim Pertanyaan",
+    "success_title": "Pesan Terkirim",
+    "success_desc": "Terima kasih. Kami akan menanggapi pertanyaan Anda dalam waktu 24 jam."
+  },
+  "footer": {
+    "description": "Dedikasi untuk pelestarian arsip budaya dan keagungan arsitektur nusantara. Merawat memori, membangun masa depan.",
+    "explore": "Jelajahi",
+    "organization": "Organisasi",
+    "office": "Kantor",
+    "copyright": "Hak cipta dilindungi. Dibuat dengan bangga."
+  }
+}

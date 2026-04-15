@@ -1,0 +1,79 @@
+{
+  "navbar": {
+    "home": "Home",
+    "gallery": "Archive",
+    "event": "Events",
+    "about": "About",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "hero": {
+    "est": "EST. 1855",
+    "title": "Step into Heritage",
+    "subtitle": "Kampung Kemasan",
+    "tagline": "Where History Lives in Every Corner"
+  },
+  "gallery": {
+    "title": "Gallery",
+    "subtitle": "Capturing the Essence of Kampung Kemasan",
+    "description": "From grand architecture to everyday life, explore a curated collection of photos celebrating the beauty and cultural heritage of Kampung Kemasan."
+  },
+  "features": {
+    "architecture_title": "Unique Architecture",
+    "architecture_desc": "Famous for grand houses built by wealthy merchants. A fusion of Dutch structures, Chinese carvings, and Javanese spatial concepts.",
+    "history_title": "Historical Significance",
+    "history_desc": "Flourished as a settlement for successful traders when Gresik was a primary international trading hub during the Dutch era.",
+    "photography_title": "Photographer's Paradise",
+    "photography_desc": "Vibrant green and turquoise façades with symmetrical windows provide the perfect backdrop for cultural photography."
+  },
+  "narrative": {
+    "title": "More than just old buildings, a living legacy.",
+    "description": "Located in East Java, Kampung Kemasan is a cultural treasure reflecting centuries of trade and tradition. Walking through the streets is like stepping back in time.",
+    "cta": "Learn The Full Story"
+  },
+  "about": {
+    "story_title": "The Story of Kampung Kemasan",
+    "story_subtitle": "Gresik's Historical Gold Standard",
+    "intro_text": "A neighborhood historically tied to the gold merchants of Gresik, blending wealth with timeless architecture.",
+    "quote": "Unlike many historical districts lost to modernization, Kampung Kemasan survived thanks to community awareness and preservation efforts.",
+    "history_detail": "In the late 1800s, successful traders built luxurious residences here, reflecting their status through a mix of Dutch colonial techniques, Chinese Peranakan details, and Javanese craftsmanship.",
+    "highlights_title": "Architectural Highlights",
+    "vision_title": "Our Vision",
+    "vision_desc": "To preserve Kampung Kemasan as a symbol of multicultural harmony and historical pride in Gresik.",
+    "mission_title": "Our Mission",
+    "harmony_title": "Cultural Harmony",
+    "harmony_desc": "Peaceful coexistence between Javanese communities, Chinese Peranakan merchants, and Dutch colonial influences.",
+    "action_title": "Preservation Efforts",
+    "action_desc": "Local government and activists work to restore damaged façades and maintain original design elements."
+  },
+  "events": {
+    "title": "Annual Events",
+    "subtitle": "Celebrating Heritage, Trade, and Art",
+    "pasar_bandeng": "Pasar Bandeng Festive",
+    "badoghan": "Festival Badoghan",
+    "mtn_lab": "MTN Lab: Talent Space",
+    "mtn_desc": "Initiated by the Ministry of Culture, this program turns Kampung Kemasan into a creative laboratory for young artists to explore coastal narratives.",
+    "cta_register": "Register for Event"
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Collaboration & Inquiry",
+    "address_label": "Address",
+    "digital_label": "Digital",
+    "social_label": "Socials",
+    "contact_label": "Contact",
+    "form_name": "Full Name",
+    "form_email": "Email Address",
+    "form_message": "Your Message",
+    "form_submit": "Send Inquiry",
+    "success_title": "Message Sent",
+    "success_desc": "Thank you. We will respond to your inquiry within 24 hours."
+  },
+  "footer": {
+    "description": "Dedicated to the preservation of cultural archives and the majesty of Nusantara architecture. Nurturing memory, building the future.",
+    "explore": "Explore",
+    "organization": "Organization",
+    "office": "Office",
+    "copyright": "All rights reserved. Crafted with pride."
+  }
+}

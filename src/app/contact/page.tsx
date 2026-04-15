@@ -2,8 +2,11 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import "../../i18n";
+import { useTranslation } from "react-i18next";
 
 export default function ContactPage() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -31,10 +34,10 @@ export default function ContactPage() {
         {/* Header Section */}
         <div className="mb-20 border-l-8 border-black pl-6">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tighter uppercase leading-none">
-            Get in Touch.
+            {t("contact.title")}
           </h1>
           <p className="text-zinc-500 mt-4 text-sm font-light tracking-[0.4em] uppercase">
-            Collaboration & Inquiry
+            {t("contact.subtitle")}
           </p>
         </div>
 
@@ -43,7 +46,7 @@ export default function ContactPage() {
           <div className="space-y-12">
             <div>
               <h3 className="text-xs font-bold uppercase tracking-[0.3em] text-[#C9A051] mb-6">
-                01. Address
+                1. {t("contact.address_label")}
               </h3>
               <p className="text-2xl font-medium text-zinc-900 leading-tight">
                 Jl. Nyai Ageng Arem-Arem No.3 <br />
@@ -54,7 +57,7 @@ export default function ContactPage() {
 
             <div>
               <h3 className="text-xs font-bold uppercase tracking-[0.3em] text-[#C9A051] mb-6">
-                02. Digital
+                02. {t("contact.contact_label")}
               </h3>
               <div className="space-y-2">
                 <p className="text-xl font-medium">hello@kampungkemasan.id</p>
@@ -64,7 +67,7 @@ export default function ContactPage() {
 
             <div>
               <h3 className="text-xs font-bold uppercase tracking-[0.3em] text-[#C9A051] mb-6">
-                03. Socials
+                03. {t("contact.social_label")}
               </h3>
               <div className="flex gap-6">
                 {["Instagram", "YouTube", "Twitter"].map((social) => (
@@ -94,18 +97,17 @@ export default function ContactPage() {
                     ✓
                   </div>
                   <h2 className="text-2xl font-bold uppercase tracking-tighter">
-                    Message Sent
+                    {t("contact.success_title")}
                   </h2>
                   <p className="text-zinc-500 font-light">
-                    Thank you. We will respond to your <br /> inquiry within 24
-                    hours.
+                    {t("contact.success_desc")}
                   </p>
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-8">
                   <div className="group">
                     <label className="block text-[10px] font-bold uppercase tracking-widest text-zinc-400 mb-2 group-focus-within:text-[#C9A051] transition-colors">
-                      Full Name
+                      {t("contact.form_name")}
                     </label>
                     <input
                       type="text"
@@ -120,7 +122,7 @@ export default function ContactPage() {
 
                   <div className="group">
                     <label className="block text-[10px] font-bold uppercase tracking-widest text-zinc-400 mb-2 group-focus-within:text-[#C9A051] transition-colors">
-                      Email Address
+                      {t("contact.form_email")}
                     </label>
                     <input
                       type="email"
@@ -135,7 +137,7 @@ export default function ContactPage() {
 
                   <div className="group">
                     <label className="block text-[10px] font-bold uppercase tracking-widest text-zinc-400 mb-2 group-focus-within:text-[#C9A051] transition-colors">
-                      Your Message
+                      {t("contact.form_message")}
                     </label>
                     <textarea
                       name="message"
@@ -152,7 +154,7 @@ export default function ContactPage() {
                     type="submit"
                     className="w-full bg-black text-white py-5 font-bold uppercase tracking-[0.3em] text-xs hover:bg-[#C9A051] transition-all duration-500 transform active:scale-[0.98]"
                   >
-                    Send Inquiry →
+                    {t("contact.form_submit")}
                   </button>
                 </form>
               )}

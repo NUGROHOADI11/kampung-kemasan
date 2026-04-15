@@ -3,6 +3,9 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import "../../i18n";
+import { useTranslation } from "react-i18next";
+
 
 interface GalleryItem {
   id: string;
@@ -59,17 +62,18 @@ const galleryItems: GalleryItem[] = [
 
 export default function GalleryPage() {
   const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
-
+  
+  const { t } = useTranslation();
   return (
     <div className="min-h-screen py-20 px-4 sm:px-8 bg-[#F6F6EC]">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="mb-16 border-l-8 border-black pl-6">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tighter uppercase leading-none">
-            Gallery.
+            {t("gallery.title")}
           </h1>
           <p className="text-zinc-500 mt-4 text-sm font-light tracking-[0.4em] uppercase">
-            Visual Documentation of Kampung Kemasan
+            {t("gallery.subtitle")}
           </p>
         </div>
 

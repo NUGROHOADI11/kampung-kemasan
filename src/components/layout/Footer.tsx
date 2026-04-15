@@ -1,7 +1,12 @@
+"use client";
+
 import { FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
+import "../../i18n";
 
 export default function Footer() {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -11,12 +16,10 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-5 space-y-6">
             <h3 className="text-[#C9A051] text-3xl font-bold uppercase tracking-tighter leading-none">
-              Kampung <br /> Kemasan Heritage
+              {t("hero.subtitle")} <br /> Heritage
             </h3>
             <p className="text-zinc-500 text-sm font-light leading-relaxed max-w-sm">
-              Dedikasi untuk pelestarian arsip budaya dan keagungan arsitektur
-              nusantara. Merawat memori, membangun masa depan melalui
-              dokumentasi dan edukasi.
+              {t("footer.description")}
             </p>
           </div>
 
@@ -24,7 +27,7 @@ export default function Footer() {
           <div className="lg:col-span-4 grid grid-cols-2 gap-8">
             <div className="space-y-4">
               <h4 className="text-[10px] font-bold uppercase tracking-[0.3em] text-zinc-500">
-                Explore
+                {t("footer.explore")}
               </h4>
               <ul className="space-y-2 text-sm uppercase tracking-widest font-medium">
                 <li>
@@ -32,7 +35,7 @@ export default function Footer() {
                     href="/"
                     className="hover:text-[#C9A051] transition-colors"
                   >
-                    Home
+                    {t("navbar.home")}
                   </Link>
                 </li>
                 <li>
@@ -40,7 +43,7 @@ export default function Footer() {
                     href="/gallery"
                     className="hover:text-[#C9A051] transition-colors"
                   >
-                    Archive
+                    {t("navbar.gallery")}
                   </Link>
                 </li>
                 <li>
@@ -48,14 +51,14 @@ export default function Footer() {
                     href="/event"
                     className="hover:text-[#C9A051] transition-colors"
                   >
-                    Events
+                    {t("navbar.event")}
                   </Link>
                 </li>
               </ul>
             </div>
             <div className="space-y-4">
               <h4 className="text-[10px] font-bold uppercase tracking-[0.3em] text-zinc-500">
-                Organization
+                {t("footer.organization")}
               </h4>
               <ul className="space-y-2 text-sm uppercase tracking-widest font-medium">
                 <li>
@@ -63,7 +66,7 @@ export default function Footer() {
                     href="/about"
                     className="hover:text-[#C9A051] transition-colors"
                   >
-                    About Us
+                    {t("navbar.about")}
                   </Link>
                 </li>
                 <li>
@@ -71,24 +74,24 @@ export default function Footer() {
                     href="/contact"
                     className="hover:text-[#C9A051] transition-colors"
                   >
-                    Contact
+                    {t("navbar.contact")}
                   </Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link
                     href="/privacy"
-                    className="hover:text-[#C9A051] transition-colors"
+                    className="hover:text-[#C9A051] transition-colors text-zinc-600"
                   >
                     Privacy
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>
 
           {/* Social & Contact Column */}
-          <div className="lg:col-span-3 flex flex-col justify-between items-start lg:items-end">
-            <div className="flex gap-6">
+          <div className="lg:col-span-3 flex flex-col justify-between items-start lg:items-end text-start lg:text-end">
+            <div className="flex gap-6 lg:justify-end w-full">
               {[
                 { icon: <FaInstagram />, href: "#" },
                 { icon: <FaTwitter />, href: "#" },
@@ -103,11 +106,11 @@ export default function Footer() {
                 </a>
               ))}
             </div>
-            <div className="mt-8 lg:mt-0 text-start lg:text-end">
+            <div className="mt-8 lg:mt-0">
               <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-500 mb-1">
-                Office
+                {t("footer.office")}
               </p>
-              <p className="text-xs text-zinc-400 leading-relaxed">
+              <p className="text-xs text-zinc-400 leading-relaxed uppercase tracking-tighter">
                 Jl. Nyai Ageng Arem-Arem No.3 <br />
                 Gresik, Jawa Timur 61114
               </p>
@@ -118,12 +121,12 @@ export default function Footer() {
         {/* Copyright Section */}
         <div className="pt-10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-[10px] uppercase tracking-[0.2em] text-zinc-600">
-            &copy; {currentYear} Kampung Kemasan. All rights reserved.
+            &copy; {currentYear} {t("hero.subtitle")}. {t("footer.copyright")}
           </p>
           <div className="flex items-center gap-2">
             <div className="h-px w-8 bg-zinc-800"></div>
             <p className="text-[10px] uppercase tracking-[0.2em] text-zinc-600">
-              Gresik Heritage Corridor
+              Kampung Kemasan Heritage
             </p>
           </div>
         </div>
