@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
+import Link from "next/link";
 import {
   FaCamera,
   FaMapMarkedAlt,
@@ -18,52 +20,34 @@ import {
   FaArrowRight,
 } from "react-icons/fa";
 
+// Updated IDs to match the translation keys
 const exploreTabs = [
-  {
-    id: "transportasi",
-    title: "Transportasi",
-    icon: FaMapMarkedAlt,
-    desc: "Akses dari berbagai kota dan pilihan transportasi.",
-  },
-  {
-    id: "aktivitas",
-    title: "Aktivitas",
-    icon: FaCamera,
-    desc: "Workshop, walking tour, dan spot foto heritage.",
-  },
-  {
-    id: "kuliner",
-    title: "Kuliner",
-    icon: FaUtensils,
-    desc: "Cita rasa otentik Gresik dan tempat nongkrong.",
-  },
-  {
-    id: "akomodasi",
-    title: "Akomodasi",
-    icon: FaBed,
-    desc: "Penginapan heritage hemat & nyaman.",
-  },
+  { id: "transportation", icon: FaMapMarkedAlt },
+  { id: "activities", icon: FaCamera },
+  { id: "culinary", icon: FaUtensils },
+  { id: "accommodation", icon: FaBed },
 ];
 
 export default function Explore() {
-  const [activeExplore, setActiveExplore] = useState("transportasi");
+  const { t } = useTranslation();
+  const [activeExplore, setActiveExplore] = useState("transportation");
 
   const renderContent = () => {
     switch (activeExplore) {
-      case "transportasi":
+      case "transportation":
         return (
           <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
             <div>
               <h3 className="text-2xl font-bold text-[#8B2615] mb-3">
-                Akses & Peta Lokasi
+                {t("explore.transportation.heading")}
               </h3>
-              <p className="text-zinc-600 leading-relaxed">
-                Kampung Kemasan terletak strategis di pusat Kota Gresik,
-                sehingga mudah dijangkau dari berbagai kota di sekitarnya.
-                Lokasinya hanya sekitar{" "}
-                <strong>20 kilometer dari Surabaya</strong> dan sekitar{" "}
-                <strong>145 kilometer dari Malang</strong>.
-              </p>
+              {/* Using dangerouslySetInnerHTML to render the <strong> tags from JSON */}
+              <p
+                className="text-zinc-600 leading-relaxed"
+                dangerouslySetInnerHTML={{
+                  __html: t("explore.transportation.description"),
+                }}
+              />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -72,24 +56,26 @@ export default function Explore() {
                   <div className="bg-[#8B2615] p-2 rounded-lg text-white">
                     <FaCar />
                   </div>
-                  <h4 className="font-bold text-zinc-800">Dengan Mobil</h4>
+                  <h4 className="font-bold text-zinc-800">
+                    {t("explore.transportation.by_car.title")}
+                  </h4>
                 </div>
                 <ul className="text-sm text-zinc-600 space-y-2">
                   <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />{" "}
-                    Dari Surabaya: Ambil jalur tol Surabaya-Gresik
+                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />
+                    {t("explore.transportation.by_car.step1")}
                   </li>
                   <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />{" "}
-                    Ikuti petunjuk arah menuju pusat Kota Gresik
+                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />
+                    {t("explore.transportation.by_car.step2")}
                   </li>
                   <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />{" "}
-                    Tiba dalam waktu sekitar 40-50 menit
+                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />
+                    {t("explore.transportation.by_car.step3")}
                   </li>
                   <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />{" "}
-                    Area parkir tersedia di sekitar lokasi
+                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />
+                    {t("explore.transportation.by_car.step4")}
                   </li>
                 </ul>
               </div>
@@ -99,20 +85,22 @@ export default function Explore() {
                   <div className="bg-[#8B2615] p-2 rounded-lg text-white">
                     <FaBus />
                   </div>
-                  <h4 className="font-bold text-zinc-800">Dengan Bus</h4>
+                  <h4 className="font-bold text-zinc-800">
+                    {t("explore.transportation.by_bus.title")}
+                  </h4>
                 </div>
                 <ul className="text-sm text-zinc-600 space-y-2">
                   <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />{" "}
-                    Dari terminal Bungurasih ke Gresik
+                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />
+                    {t("explore.transportation.by_bus.step1")}
                   </li>
                   <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />{" "}
-                    Gunakan Bus Transjatim (Rp 5.000 - Rp 15.000)
+                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />
+                    {t("explore.transportation.by_bus.step2")}
                   </li>
                   <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />{" "}
-                    Tiba dalam 40-50 menit (turun halte Transjatim)
+                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />
+                    {t("explore.transportation.by_bus.step3")}
                   </li>
                 </ul>
               </div>
@@ -122,16 +110,18 @@ export default function Explore() {
                   <div className="bg-[#8B2615] p-2 rounded-lg text-white">
                     <FaTrain />
                   </div>
-                  <h4 className="font-bold text-zinc-800">Dengan Kereta</h4>
+                  <h4 className="font-bold text-zinc-800">
+                    {t("explore.transportation.by_train.title")}
+                  </h4>
                 </div>
                 <ul className="text-sm text-zinc-600 space-y-2">
                   <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />{" "}
-                    Perjalanan menuju stasiun di Surabaya
+                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />
+                    {t("explore.transportation.by_train.step1")}
                   </li>
                   <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />{" "}
-                    Lanjutkan ke Gresik dengan mobil / transportasi online
+                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />
+                    {t("explore.transportation.by_train.step2")}
                   </li>
                 </ul>
               </div>
@@ -142,17 +132,17 @@ export default function Explore() {
                     <FaPlane />
                   </div>
                   <h4 className="font-bold text-zinc-800">
-                    Dari Bandara Juanda
+                    {t("explore.transportation.by_plane.title")}
                   </h4>
                 </div>
                 <ul className="text-sm text-zinc-600 space-y-2">
                   <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />{" "}
-                    Taksi / transportasi online (sekitar 1 jam)
+                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />
+                    {t("explore.transportation.by_plane.step1")}
                   </li>
                   <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />{" "}
-                    Atau shuttle bandara ke Surabaya, lanjut ke Gresik
+                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />
+                    {t("explore.transportation.by_plane.step2")}
                   </li>
                 </ul>
               </div>
@@ -160,47 +150,46 @@ export default function Explore() {
 
             <div>
               <h4 className="font-bold text-lg text-[#8B2615] mb-4 flex items-center gap-2">
-                <FaBicycle /> Transportasi Wisata Lokal
+                <FaBicycle />{" "}
+                {t("explore.transportation.local_transport.title")}
               </h4>
               <p className="text-sm text-zinc-600 mb-3">
-                Pilihan kendaraan untuk berkeliling area Kampung Kemasan:
+                {t("explore.transportation.local_transport.desc")}
               </p>
               <div className="flex flex-wrap gap-3">
                 <span className="px-4 py-2 bg-white border border-zinc-200 rounded-full text-sm font-medium text-zinc-700 shadow-sm">
-                  Dokar (Kereta Kuda)
+                  {t("explore.transportation.local_transport.opt1")}
                 </span>
                 <span className="px-4 py-2 bg-white border border-zinc-200 rounded-full text-sm font-medium text-zinc-700 shadow-sm">
-                  Becak
+                  {t("explore.transportation.local_transport.opt2")}
                 </span>
                 <span className="px-4 py-2 bg-white border border-zinc-200 rounded-full text-sm font-medium text-zinc-700 shadow-sm">
-                  Bus Macito Gresik
+                  {t("explore.transportation.local_transport.opt3")}
                 </span>
                 <span className="px-4 py-2 bg-white border border-zinc-200 rounded-full text-sm font-medium text-zinc-700 shadow-sm">
-                  Bus Susun (Bandar Grisse)
+                  {t("explore.transportation.local_transport.opt4")}
                 </span>
               </div>
             </div>
           </div>
         );
 
-      case "aktivitas":
+      case "activities":
         return (
           <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
             <div>
               <h3 className="text-2xl font-bold text-[#8B2615] mb-3">
-                Aktivitas di Kampung Kemasan
+                {t("explore.activities.heading")}
               </h3>
               <p className="text-zinc-600 leading-relaxed">
-                Jangan sia-siakan waktu kalau belum mencoba berbagai kegiatan
-                menarik dan mengabadikan momen di sekitar kawasan heritage ini!
+                {t("explore.activities.description")}
               </p>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              {/* Kategori 1: Kegiatan Eksplorasi */}
               <div className="bg-white p-6 rounded-3xl border border-zinc-100 shadow-sm">
                 <h4 className="font-bold text-lg text-zinc-800 mb-4 border-b pb-2">
-                  Kegiatan Eksplorasi
+                  {t("explore.activities.exploration.title")}
                 </h4>
                 <ul className="space-y-4">
                   <li className="flex items-center gap-3 text-zinc-600">
@@ -208,7 +197,7 @@ export default function Explore() {
                       <FaUtensils />
                     </div>
                     <span className="font-medium">
-                      Workshop Kerajinan Lokal
+                      {t("explore.activities.exploration.item1")}
                     </span>
                   </li>
                   <li className="flex items-center gap-3 text-zinc-600">
@@ -216,7 +205,7 @@ export default function Explore() {
                       <FaMapMarkedAlt />
                     </div>
                     <span className="font-medium">
-                      Walking Tour Kawasan Heritage
+                      {t("explore.activities.exploration.item2")}
                     </span>
                   </li>
                   <li className="flex items-center gap-3 text-zinc-600">
@@ -224,16 +213,15 @@ export default function Explore() {
                       <FaBus />
                     </div>
                     <span className="font-medium">
-                      Keliling Kota Lama (Bus Macito)
+                      {t("explore.activities.exploration.item3")}
                     </span>
                   </li>
                 </ul>
               </div>
 
-              {/* Kategori 2: Dokumentasi Estetik */}
               <div className="bg-white p-6 rounded-3xl border border-zinc-100 shadow-sm">
                 <h4 className="font-bold text-lg text-zinc-800 mb-4 border-b pb-2">
-                  Dokumentasi Estetik
+                  {t("explore.activities.documentation.title")}
                 </h4>
                 <ul className="space-y-4">
                   <li className="flex items-center gap-3 text-zinc-600">
@@ -241,48 +229,50 @@ export default function Explore() {
                       <FaCamera />
                     </div>
                     <span className="font-medium">
-                      Swafoto di Arsitektur Klasik
+                      {t("explore.activities.documentation.item1")}
                     </span>
                   </li>
                   <li className="flex items-center gap-3 text-zinc-600">
                     <div className="p-2 bg-purple-100 text-purple-600 rounded-lg">
                       <FaCamera />
                     </div>
-                    <span className="font-medium">Video Blogging (Vlog)</span>
+                    <span className="font-medium">
+                      {t("explore.activities.documentation.item2")}
+                    </span>
                   </li>
                   <li className="flex items-center gap-3 text-zinc-600">
                     <div className="p-2 bg-rose-100 text-rose-500 rounded-lg">
                       <FaCamera />
                     </div>
-                    <span className="font-medium">Sesi Foto Pre-wedding</span>
+                    <span className="font-medium">
+                      {t("explore.activities.documentation.item3")}
+                    </span>
                   </li>
                 </ul>
               </div>
             </div>
 
             <div className="flex justify-end pt-2">
-              <a
+              <Link
                 href="/event"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-[#8B2615] text-white font-semibold rounded-full shadow-sm hover:bg-[#731f11] transition-all duration-300 group"
               >
-                Lihat Event Mendatang
+                {t("explore.activities.cta")}
                 <FaArrowRight className="transform group-hover:translate-x-1 transition-transform duration-300" />
-              </a>
+              </Link>
             </div>
           </div>
         );
 
-      case "kuliner":
+      case "culinary":
         return (
           <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
             <div>
               <h3 className="text-2xl font-bold text-[#8B2615] mb-3">
-                Eksplorasi Rasa & Budaya
+                {t("explore.culinary.heading")}
               </h3>
               <p className="text-zinc-600 leading-relaxed">
-                Setelah menjelajahi keindahan jalan-jalan bersejarah, lanjutkan
-                perjalanan dengan menikmati beragam kuliner khas. Mulai dari
-                hidangan gurih hingga camilan manis tradisional.
+                {t("explore.culinary.description")}
               </p>
             </div>
 
@@ -292,20 +282,26 @@ export default function Explore() {
                   <FaUtensils size={24} />
                 </div>
                 <h4 className="font-bold text-zinc-800 mb-3">
-                  Makanan Populer
+                  {t("explore.culinary.popular.title")}
                 </h4>
                 <ul className="text-sm text-zinc-600 space-y-3">
                   <li>
-                    <strong>Nasi Krawu:</strong> Suwiran daging sapi lezat
-                    dengan sambal pedas khas.
+                    <strong>
+                      {t("explore.culinary.popular.item1_title")}:
+                    </strong>{" "}
+                    {t("explore.culinary.popular.item1_desc")}
                   </li>
                   <li>
-                    <strong>Otak-otak Bandeng:</strong> Olahan ikan unik dengan
-                    bumbu kaya rasa.
+                    <strong>
+                      {t("explore.culinary.popular.item2_title")}:
+                    </strong>{" "}
+                    {t("explore.culinary.popular.item2_desc")}
                   </li>
                   <li>
-                    <strong>Pudak:</strong> Camilan manis tradisional dari
-                    tepung beras & santan.
+                    <strong>
+                      {t("explore.culinary.popular.item3_title")}:
+                    </strong>{" "}
+                    {t("explore.culinary.popular.item3_desc")}
                   </li>
                 </ul>
               </div>
@@ -315,16 +311,13 @@ export default function Explore() {
                   <FaShoppingBag size={24} />
                 </div>
                 <h4 className="font-bold text-zinc-800 mb-3">
-                  Oleh-oleh Ikonik
+                  {t("explore.culinary.souvenir.title")}
                 </h4>
                 <div className="text-sm text-zinc-600">
                   <p className="font-bold text-zinc-800 mb-1">
-                    Batik Gajah Mungkur
+                    {t("explore.culinary.souvenir.item_title")}
                   </p>
-                  <p>
-                    Batik khas Gresik yang dibuat di rumah warisan budaya Gajah
-                    Mungkur peninggalan H. Oemar, dekat Kampung Kemasan.
-                  </p>
+                  <p>{t("explore.culinary.souvenir.item_desc")}</p>
                 </div>
               </div>
 
@@ -333,7 +326,7 @@ export default function Explore() {
                   <FaCoffee size={24} />
                 </div>
                 <h4 className="font-bold text-zinc-800 mb-3">
-                  Tempat Nongkrong
+                  {t("explore.culinary.hangout.title")}
                 </h4>
                 <ul className="text-sm text-zinc-600 space-y-2">
                   <li className="flex items-center gap-2">
@@ -351,23 +344,22 @@ export default function Explore() {
           </div>
         );
 
-      case "akomodasi":
+      case "accommodation":
         return (
           <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
             <div>
               <h3 className="text-2xl font-bold text-[#8B2615] mb-3">
-                Tempat Menginap
+                {t("explore.accommodation.heading")}
               </h3>
               <p className="text-zinc-600 leading-relaxed">
-                Bagi Anda yang merencanakan singgah lebih lama untuk eksplorasi,
-                terdapat pilihan penginapan praktis yang sarat nilai sejarah.
+                {t("explore.accommodation.description")}
               </p>
             </div>
 
             <div className="bg-zinc-50 rounded-3xl p-6 lg:p-8 border border-zinc-100 flex flex-col gap-6">
               <div className="space-y-4">
                 <div className="inline-block bg-green-100 text-green-700 font-bold px-3 py-1 rounded-full text-xs tracking-wider uppercase mb-1">
-                  Rekomendasi
+                  {t("explore.accommodation.recommendation")}
                 </div>
                 <h4 className="text-3xl font-extrabold text-zinc-800">
                   The Bahagia Hotel
@@ -375,22 +367,15 @@ export default function Explore() {
                 <p className="text-2xl font-semibold text-[#8B2615]">
                   IDR 150.000{" "}
                   <span className="text-sm text-zinc-400 font-normal">
-                    / malam
+                    {t("explore.accommodation.per_night")}
                   </span>
                 </p>
                 <div className="h-px w-full bg-zinc-200 my-4" />
                 <p className="text-zinc-600 leading-relaxed">
-                  Dikenal sebagai salah satu hotel tertua di area ini, The
-                  Bahagia Hotel menjadi akomodasi terdekat dari Kampung Kemasan.
+                  {t("explore.accommodation.desc1")}
                   <br />
                   <br />
-                  Hotel ini sangat populer di kalangan <em>
-                    solo traveler
-                  </em>{" "}
-                  dan <em>backpacker</em>. Dengan suasana sederhana, ramah di
-                  kantong, dan nyaman, penginapan ini adalah pilihan ideal bagi
-                  wisatawan yang mengutamakan efisiensi istirahat setelah
-                  seharian berjalan-jalan di kawasan heritage Gresik.
+                  {t("explore.accommodation.desc2")}
                 </p>
               </div>
             </div>
@@ -407,12 +392,13 @@ export default function Explore() {
         <div className="w-full lg:w-1/3 xl:w-[30%] flex flex-col gap-4 lg:gap-6 shrink-0">
           <div className="text-center lg:text-left mb-2 lg:mb-0">
             <h2 className="text-3xl font-black tracking-tighter uppercase leading-none text-[#8B2615]">
-              Jelajahi <br className="hidden lg:block" />
-              <span className="text-zinc-800 text-2xl">Kampung Kemasan</span>
+              {t("explore.title")} <br className="hidden lg:block" />
+              <span className="text-zinc-800 text-2xl">
+                {t("explore.subtitle")}
+              </span>
             </h2>
             <p className="text-zinc-500 text-sm mt-2 lg:mt-3 leading-relaxed hidden lg:block">
-              Pilih menu di bawah untuk melihat panduan lengkap perjalanan,
-              tempat menarik, hingga akomodasi di sekitar kota lama Gresik.
+              {t("explore.description")}
             </p>
           </div>
 
@@ -446,14 +432,14 @@ export default function Explore() {
                         isActive ? "text-white" : "text-zinc-800"
                       }`}
                     >
-                      {tab.title}
+                      {t(`explore.tabs.${tab.id}.title`)}
                     </span>
                     <p
                       className={`mt-1 text-xs line-clamp-2 transition-colors ${
                         isActive ? "text-white/80" : "text-zinc-500"
                       }`}
                     >
-                      {tab.desc}
+                      {t(`explore.tabs.${tab.id}.desc`)}
                     </p>
                   </div>
                 </button>

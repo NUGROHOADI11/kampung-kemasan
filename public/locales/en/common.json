@@ -53,21 +53,6 @@
     "description": "Nestled within the historic district of Gresik stands a cultural treasure beautifully preserved. The spirit of ancient trade, rich traditions, and timeless architectural elegance — the heritage village of Kampung Kemasan Gresik.",
     "cta": "Learn The Full Story"
   },
-  "about": {
-    "story_title": "The Story of Kampung Kemasan",
-    "story_subtitle": "Gresik's Historical Gold Standard",
-    "intro_text": "A neighborhood historically tied to the gold merchants of Gresik, blending wealth with timeless architecture.",
-    "quote": "Unlike many historical districts lost to modernization, Kampung Kemasan survived thanks to community awareness and preservation efforts.",
-    "history_detail": "In the late 1800s, successful traders built luxurious residences here, reflecting their status through a mix of Dutch colonial techniques, Chinese Peranakan details, and Javanese craftsmanship.",
-    "highlights_title": "Architectural Highlights",
-    "vision_title": "Our Vision",
-    "vision_desc": "To preserve Kampung Kemasan as a symbol of multicultural harmony and historical pride in Gresik.",
-    "mission_title": "Our Mission",
-    "harmony_title": "Cultural Harmony",
-    "harmony_desc": "Peaceful coexistence between Javanese communities, Chinese Peranakan merchants, and Dutch colonial influences.",
-    "action_title": "Preservation Efforts",
-    "action_desc": "Local government and activists work to restore damaged façades and maintain original design elements."
-  },
   "events": {
     "title": "Annual Events",
     "subtitle": "Celebrating Heritage, Trade, and Art",
@@ -90,6 +75,180 @@
     "form_submit": "Send Inquiry",
     "success_title": "Message Sent",
     "success_desc": "Thank you. We will respond to your inquiry within 24 hours."
+  },
+  "about": {
+    "title": "About",
+    "description": "Where history lives in every corner",
+    "location": "East Java, Indonesia",
+    "intro": {
+      "heading": "In the heart of the historic port city of Gresik lies a cultural treasure reflecting the civilization of trade, tradition, and architectural beauty of its time.",
+      "p1": "Exploring Kampung Kemasan means traversing the corridors of time — where well-preserved colonial buildings stand tall, authentic local culinary delights welcome every visitor, and the nuances of past glory are palpable in every corner.",
+      "p2": "Kampung Kemasan Gresik is one of the most iconic tourist destinations in East Java. Known for its unique architectural style, this area offers a harmonious blend of Chinese, Arab, and Javanese cultural influences — a mirror of civilization born from centuries-old trade routes."
+    },
+    "stats": {
+      "year_label": "Year Established",
+      "culture_label": "Architectural Cultural Influences",
+      "heritage_label": "Years of Preserved Heritage"
+    },
+    "history": {
+      "title": "Historical Journey",
+      "item1_title": "1855 — The Origin of the Name \"Kemasan\"",
+      "item1_desc": "The name \"Kemasan\" is believed to originate from the word 'emas' (gold), referring to the gold merchants who once settled and thrived in this area. This wealthy merchant community became the early foundation for the area's cultural and economic identity.",
+      "item2_title": "1896 — H. Oemar Bin Achmad's Leather Tanning Industry",
+      "item2_desc": "H. Oemar Bin Achmad established a leather tanning business in Kampung Kemasan — an industrial milestone that drove the economy of Gresik. Assisted by Chinese artisans residing in the area, the business was later developed by his five sons.",
+      "item3_title": "Late 19th Century — The Era of Grand Merchant Houses",
+      "item3_desc": "Wealthy merchants like H. Oemar Bin Achmad built grand houses as symbols of prosperity and social status. These buildings combine Dutch colonial structures, Peranakan Chinese ornaments, and touches of traditional Javanese craftsmanship — creating unmatched architectural harmony.",
+      "item4_title": "Present Day — Protected Cultural Heritage Area",
+      "item4_desc": "Thanks to the awareness and dedication of the local community, Kampung Kemasan has managed to survive amidst the currents of modernization. Today, this area stands firm as an official cultural heritage site of Gresik, bringing back the majesty of the past that every visitor can still enjoy."
+    },
+    "cultures": {
+      "chinese_title": "Chinese",
+      "chinese_desc": "Peranakan Ornaments — fine carvings, red-gold colors, and typical Chinese Peranakan decorations that mark the identity of the Chinese merchant community that once settled here.",
+      "dutch_title": "Dutch Colonial",
+      "dutch_desc": "European Structures — sturdy pillars, tall glass-paneled windows, and 19th-century European-style layouts reflecting the strong influence of the colonial era in Gresik's urban landscape.",
+      "javanese_title": "Javanese",
+      "javanese_desc": "Traditional Craftsmanship — touches of batik motifs, Javanese-style wood carvings, and spatial philosophy rooted in local wisdom — making each building an expression of Nusantara cultural identity."
+    },
+    "vision_mission": {
+      "vision_title": "Our Vision",
+      "vision_desc": "To preserve Kampung Kemasan as a symbol of multicultural harmony and historical pride in Gresik.",
+      "mission_title": "Our Mission",
+      "mission1": "Preserving historical architecture",
+      "mission2": "Developing education and understanding for future generations",
+      "mission3": "Encouraging the development of sustainable cultural heritage-based tourism"
+    },
+    "closing_quote": "\"More than just old buildings, Kampung Kemasan is a living legacy.\""
+    , "contact": "Contact Us"
+  },
+  "explore": {
+    "title": "Explore",
+    "subtitle": "Kampung Kemasan",
+    "description": "Select a menu below to see a complete travel guide, attractions, and accommodations around the old city of Gresik.",
+    "tabs": {
+      "transportation": {
+        "title": "Transportation",
+        "desc": "Access from various cities and transportation options."
+      },
+      "activities": {
+        "title": "Activities",
+        "desc": "Workshops, walking tours, and heritage photo spots."
+      },
+      "culinary": {
+        "title": "Culinary",
+        "desc": "Authentic Gresik flavors and hangout spots."
+      },
+      "accommodation": {
+        "title": "Accommodation",
+        "desc": "Affordable & comfortable heritage lodging."
+      }
+    },
+    "transportation": {
+      "heading": "Access & Location Map",
+      "description": "Kampung Kemasan is strategically located in the center of Gresik City, making it easily accessible from various surrounding cities. It is located only about <strong>20 kilometers from Surabaya</strong> and about <strong>145 kilometers from Malang</strong>.",
+      "by_car": {
+        "title": "By Car",
+        "step1": "From Surabaya: Take the Surabaya-Gresik toll road",
+        "step2": "Follow the directions to the center of Gresik City",
+        "step3": "Arrive in about 40-50 minutes",
+        "step4": "Parking areas are available around the location"
+      },
+      "by_bus": {
+        "title": "By Bus",
+        "step1": "From Bungurasih terminal to Gresik",
+        "step2": "Use the Transjatim Bus (IDR 5,000 - IDR 15,000)",
+        "step3": "Arrive in 40-50 minutes (get off at Transjatim stop)"
+      },
+      "by_train": {
+        "title": "By Train",
+        "step1": "Travel to the station in Surabaya",
+        "step2": "Continue to Gresik by car / ride-hailing app"
+      },
+      "by_plane": {
+        "title": "From Juanda Airport",
+        "step1": "Taxi / ride-hailing app (about 1 hour)",
+        "step2": "Or airport shuttle to Surabaya, then continue to Gresik"
+      },
+      "local_transport": {
+        "title": "Local Tourist Transportation",
+        "desc": "Vehicle options for getting around the Kampung Kemasan area:",
+        "opt1": "Dokar (Horse Carriage)",
+        "opt2": "Becak (Pedicab)",
+        "opt3": "Gresik Macito Bus",
+        "opt4": "Double-Decker Bus (Bandar Grisse)"
+      }
+    },
+    "activities": {
+      "heading": "Activities in Kampung Kemasan",
+      "description": "Don't miss out on trying various exciting activities and capturing moments around this heritage area!",
+      "exploration": {
+        "title": "Exploration Activities",
+        "item1": "Local Craft Workshops",
+        "item2": "Heritage Area Walking Tour",
+        "item3": "Old City Tour (Macito Bus)"
+      },
+      "documentation": {
+        "title": "Aesthetic Documentation",
+        "item1": "Selfies in Classic Architecture",
+        "item2": "Video Blogging (Vlog)",
+        "item3": "Pre-wedding Photo Session"
+      },
+      "cta": "View Upcoming Events"
+    },
+    "culinary": {
+      "heading": "Taste & Culture Exploration",
+      "description": "After exploring the beauty of the historic streets, continue your journey by enjoying a variety of typical culinary delights. From savory dishes to traditional sweet snacks.",
+      "popular": {
+        "title": "Popular Food",
+        "item1_title": "Nasi Krawu",
+        "item1_desc": "Delicious shredded beef with signature spicy sambal.",
+        "item2_title": "Otak-otak Bandeng",
+        "item2_desc": "Unique processed fish dish with rich spices.",
+        "item3_title": "Pudak",
+        "item3_desc": "Traditional sweet snack made from rice flour & coconut milk."
+      },
+      "souvenir": {
+        "title": "Iconic Souvenirs",
+        "item_title": "Gajah Mungkur Batik",
+        "item_desc": "Typical Gresik batik made in the Gajah Mungkur cultural heritage house left by H. Oemar, near Kampung Kemasan."
+      },
+      "hangout": {
+        "title": "Hangout Spots"
+      }
+    },
+    "accommodation": {
+      "heading": "Where to Stay",
+      "description": "For those of you planning to stay longer for exploration, there are practical lodging options full of historical value.",
+      "recommendation": "Recommendation",
+      "per_night": "/ night",
+      "desc1": "Known as one of the oldest hotels in this area, The Bahagia Hotel is the closest accommodation to Kampung Kemasan.",
+      "desc2": "This hotel is very popular among solo travelers and backpackers. With a simple, budget-friendly, and comfortable atmosphere, this lodging is an ideal choice for tourists who prioritize resting efficiency after a day of strolling in the Gresik heritage area."
+    }
+  },
+  "collection": {
+    "badge": "Heritage house\ncollection",
+    "intro": {
+      "title": "Heritage House Collection In\nKampung Kemasan",
+      "description": "Located in Gresik Regency, East Java, Kampung Kemasan Gresik is one of the most iconic tourist destinations in the area. The village is known for its unique architectural style that is quite different from many colonial-era buildings in general. The architecture in Kampung Kemasan is influenced by Chinese, Dutch, and Javanese cultures."
+    },
+    "features": {
+      "fake_window": {
+        "title": "Unique Structural Feature\n(Trick Window)",
+        "badge": "Trick Window",
+        "description": "The trick windows found on the houses in the Kampung Kemasan area are one of its unique and interesting architectural characteristics. At first glance, these windows look like normal windows, but they are actually just house ornaments. This design was created as part of the home security system to trick thieves, making it difficult for them to find a way out after entering the building. Besides its security function, the presence of these trick windows also adds historical value and uniqueness to the heritage architecture in Kampung Kemasan."
+      },
+      "architecture": {
+        "title": "High Ceilings & Large Windows",
+        "description": "Designed specifically for a tropical climate, these houses remain naturally cool with optimal air circulation, and comfortable without the need for modern air conditioning. Imported Tiles & Artistic Iron Details: An elegant touch is present through European ceramic tiles and cast-iron ornaments imported directly during the colonial era, reinforcing their historical value. Captivating Symmetry & Colors: The combination of symmetrical shapes and bright colors makes Kampung Kemasan look distinct—graceful, lively, and full of character."
+      }
+    },
+    "gajah_mungkur": {
+      "badge": "Gajah Mungkur",
+      "modal_title": "History of Gajah Mungkur",
+      "p1": "Kampung Kemasan in Gresik is a historical area holding many stories about the cultural development and life of the community in the past. One building closely related to the history of Kampung Kemasan is the Gajah Mungkur House. This house is an important part of the historical footprint of a large family that once lived and thrived in the area.",
+      "p2": "The connection between the Gajah Mungkur House and Kampung Kemasan can be seen from the owner's lineage. In Kampung Kemasan, there are descendants of H. Oemar bin Achmad, a fabric craftsman using swiftlet leather nests who was famous in his time for his widely recognized skills and business. From this family, the Gajah Mungkur House was born, founded by his fourth child, Abdoel Rachmad, also known as H. D. Jaelan.",
+      "p3": "The Gajah Mungkur House was built in 1896 and is located at Jalan Nyai Ageng Arem-Arem No. 38, Gresik Regency, East Java. Its location, not far from Kampung Kemasan, shows a close historical and family relationship between the two places. To this day, the Gajah Mungkur House remains a historic building with cultural value, serving as a reminder of the development of the Gresik community in the past.",
+      "p4": "Besides being known as a historic building, the Gajah Mungkur House also runs a family business that has been preserved into its third generation. One of its most famous products is Gajah Mungkur Batik, a signature batik that has become the identity and cultural heritage of the family. The existence of this batik is not only part of a family business but also helps introduce the rich local culture of Gresik."
+    }
   },
   "footer": {
     "description": "Dedicated to the preservation of cultural archives and the majesty of Nusantara architecture. Nurturing memory, building the future.",

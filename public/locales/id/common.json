@@ -7,76 +7,59 @@
     "contact": "Kontak",
     "language": "Bahasa"
   },
+  "hero": {
+    "est": "1855",
+    "title": "Mengungkap Sejarah",
+    "subtitle": "bersama Kami",
+    "tagline": "Di mana sejarah hidup di setiap sudutnya",
+    "cta": "Temukan Lebih Lanjut"
+  },
   "home": {
     "about": {
-      "title": "Menyusuri sejarah Kampung Kemasan",
-      "description1": "Berlokasi di Kabupaten Gresik, Jawa Timur Kampung Kemasan Gresik merupakan salah satu destinasi wisata yang paling ikonik di daerah tersebut. Kampung ini dikenal dengan gaya arsitekturnya yang unik dan cukup berbeda dari beberapa bangunan era kolonial pada umumnya. Bagian arsitektur yang ada di Kampung Kemasan terpengaruh dari budaya Tionghoa atau Cina, Belanda, dan Jawa.",
-      "description2": "Berlokasi di Kabupaten Gresik, Jawa Timur Kampung Kemasan Gresik merupakan salah satu destinasi wisata yang paling ikonik di daerah tersebut. Kampung ini dikenal dengan gaya arsitekturnya yang unik dan cukup berbeda dari beberapa bangunan era kolonial pada umumnya. Bagian arsitektur yang ada di Kampung Kemasan terpengaruh dari budaya Tionghoa atau Cina, Belanda, dan Jawa."
-
+      "title": "Menelusuri Sejarah Kampung Kemasan",
+      "description1": "Terletak di Kabupaten Gresik, Jawa Timur, Kampung Kemasan Gresik adalah salah satu destinasi wisata paling ikonik di daerah ini. Kampung ini dikenal dengan gaya arsitekturnya yang unik dan berbeda dari bangunan era kolonial pada umumnya. Arsitektur di Kampung Kemasan dipengaruhi oleh perpaduan budaya Tionghoa, Belanda, dan Jawa.",
+      "description2": "Terletak di Kabupaten Gresik, Jawa Timur, Kampung Kemasan Gresik adalah salah satu destinasi wisata paling ikonik di daerah ini. Kampung ini dikenal dengan gaya arsitekturnya yang unik dan berbeda dari bangunan era kolonial pada umumnya. Arsitektur di Kampung Kemasan dipengaruhi oleh perpaduan budaya Tionghoa, Belanda, dan Jawa."
     },
     "events": {
       "title": "Acara Tahunan",
       "subtitle": "Merayakan Warisan, Perdagangan, dan Seni",
-      "pasar_bandeng": "Pasar Bandeng Festive",
+      "pasar_bandeng": "Festival Pasar Bandeng",
       "badoghan": "Festival Badoghan",
-      "mtn_lab": "MTN Lab: Ruang Talenta",
-      "mtn_desc": "Diinisiasi oleh Kementerian Kebudayaan, program ini menjadikan Kampung Kemasan laboratorium kreatif bagi seniman muda.",
+      "mtn_lab": "MTN Lab: Ruang Bakat",
+      "mtn_desc": "Diinisiasi oleh Kementerian Kebudayaan, program ini mengubah Kampung Kemasan menjadi laboratorium kreatif bagi seniman muda untuk mengeksplorasi narasi pesisir Nusantara.",
       "cta_register": "Daftar Acara"
     }
   },
   "maps": {
     "title": "Jelajahi Kampung Kemasan",
-    "description": "Temukan sejarah yang kaya dan budaya yang hidup dari Kampung Kemasan melalui peta interaktif kami. Dari landmark ikonik hingga permata tersembunyi, navigasikan melalui jantung desa warisan Gresik dan ungkap ceritanya.",
-    "cta": "Peta Panduan"
+    "description": "Temukan kekayaan sejarah dan budaya Kampung Kemasan melalui peta interaktif kami. Dari tengara ikonik hingga permata tersembunyi, telusuri jantung desa warisan Gresik dan ungkap kisah-kisahnya.",
+    "cta": "Panduan Peta"
   },
-  "hero": {
-    "est": "1855",
-    "title": "Menyusuri Sejarah",
-    "subtitle": "bersama Kami",
-    "tagline": "Di Mana Sejarah Hidup di Setiap Sudut",
-    "cta": "Cari Tahu Lebih Lanjut"
-  },
-
   "gallery": {
     "title": "Galeri",
     "subtitle": "Menangkap Esensi Kampung Kemasan",
-    "description": "Dari arsitektur yang megah hingga kehidupan sehari-hari, jelajahi koleksi foto yang merayakan keindahan dan warisan budaya Kampung Kemasan."
+    "description": "Dari arsitektur megah hingga kehidupan sehari-hari, jelajahi koleksi foto pilihan yang merayakan keindahan dan warisan budaya Kampung Kemasan."
   },
   "features": {
     "architecture_title": "Arsitektur Unik",
-    "architecture_desc": "Terkenal dengan rumah-rumah megah milik saudagar kaya. Perpaduan struktur Belanda, ukiran Tiongkok, dan konsep ruang Jawa.",
-    "history_title": "Nilai Historis",
-    "history_desc": "Berkembang sebagai pemukiman pedagang sukses saat Gresik menjadi pelabuhan dagang internasional utama di era Belanda.",
-    "photography_title": "Surga Fotografi",
-    "photography_desc": "Fasad berwarna hijau dan pirus yang cerah dengan jendela simetris memberikan latar sempurna untuk fotografi budaya."
+    "architecture_desc": "Terkenal dengan rumah-rumah megah yang dibangun oleh saudagar kaya. Perpaduan struktur Belanda, ukiran Tionghoa, dan konsep tata ruang Jawa.",
+    "history_title": "Nilai Sejarah",
+    "history_desc": "Berkembang sebagai pemukiman para pedagang sukses ketika Gresik menjadi pusat perdagangan internasional utama pada era Belanda.",
+    "photography_title": "Surga Fotografer",
+    "photography_desc": "Fasad hijau dan toska yang cerah dengan jendela simetris memberikan latar belakang yang sempurna untuk fotografi budaya."
   },
   "narrative": {
-    "title": "Bukan sekadar bangunan tua, melainkan warisan yang hidup.",
-    "description": "Terletak di Jawa Timur, Kampung Kemasan adalah pusaka budaya yang merefleksikan berabad-abad perdagangan dan tradisi.",
-    "cta": "Pelajari Selengkapnya"
-  },
-  "about": {
-    "story_title": "Kisah Kampung Kemasan",
-    "story_subtitle": "Standar Emas Sejarah Gresik",
-    "intro_text": "Sebuah kawasan yang secara historis terikat dengan saudagar emas Gresik, memadukan kekayaan dengan arsitektur abadi.",
-    "quote": "Berbeda dengan banyak distrik bersejarah yang hilang karena modernisasi, Kampung Kemasan bertahan berkat kesadaran komunitas.",
-    "history_detail": "Pada akhir 1800-an, pedagang sukses membangun kediaman mewah di sini, mencerminkan status mereka melalui teknik kolonial Belanda dan detail Peranakan.",
-    "highlights_title": "Sorotan Arsitektur",
-    "vision_title": "Visi Kami",
-    "vision_desc": "Melestarikan Kampung Kemasan sebagai simbol harmoni multikultural dan kebanggaan sejarah di Gresik.",
-    "mission_title": "Misi Kami",
-    "harmony_title": "Harmoni Budaya",
-    "harmony_desc": "Koeksistensi damai antara komunitas Jawa, saudagar Tionghoa Peranakan, dan pengaruh kolonial Belanda.",
-    "action_title": "Upaya Pelestarian",
-    "action_desc": "Pemerintah setempat dan aktivis budaya bekerja sama memulihkan fasad yang rusak dan menjaga elemen desain asli."
+    "title": "Lebih dari sekadar situs warisan, ini adalah warisan sejarah yang hidup.",
+    "description": "Terselip di dalam distrik bersejarah Gresik, berdiri sebuah harta karun budaya yang terawat dengan indah. Semangat perdagangan kuno, tradisi yang kaya, dan keanggunan arsitektur yang tak lekang oleh waktu — desa warisan Kampung Kemasan Gresik.",
+    "cta": "Pelajari Kisah Lengkapnya"
   },
   "events": {
     "title": "Acara Tahunan",
     "subtitle": "Merayakan Warisan, Perdagangan, dan Seni",
-    "pasar_bandeng": "Pasar Bandeng Festive",
+    "pasar_bandeng": "Festival Pasar Bandeng",
     "badoghan": "Festival Badoghan",
-    "mtn_lab": "MTN Lab: Ruang Talenta",
-    "mtn_desc": "Diinisiasi oleh Kementerian Kebudayaan, program ini menjadikan Kampung Kemasan laboratorium kreatif bagi seniman muda.",
+    "mtn_lab": "MTN Lab: Ruang Bakat",
+    "mtn_desc": "Diinisiasi oleh Kementerian Kebudayaan, program ini mengubah Kampung Kemasan menjadi laboratorium kreatif bagi seniman muda untuk mengeksplorasi narasi pesisir Nusantara.",
     "cta_register": "Daftar Acara"
   },
   "contact": {
@@ -84,20 +67,194 @@
     "subtitle": "Kolaborasi & Pertanyaan",
     "address_label": "Alamat",
     "digital_label": "Digital",
-    "social_label": "Sosial Media",
+    "social_label": "Media Sosial",
     "contact_label": "Kontak",
     "form_name": "Nama Lengkap",
     "form_email": "Alamat Email",
     "form_message": "Pesan Anda",
-    "form_submit": "Kirim Pertanyaan",
+    "form_submit": "Kirim Pesan",
     "success_title": "Pesan Terkirim",
-    "success_desc": "Terima kasih. Kami akan menanggapi pertanyaan Anda dalam waktu 24 jam."
+    "success_desc": "Terima kasih. Kami akan membalas pesan Anda dalam waktu 24 jam."
+  },
+  "about": {
+    "title": "Tentang",
+    "description": "Di mana sejarah hidup di setiap sudutnya",
+    "location": "Jawa Timur, Indonesia",
+    "intro": {
+      "heading": "Di jantung kota pelabuhan bersejarah Gresik, tersimpan harta kebudayaan yang mencerminkan peradaban perdagangan, tradisi, dan keindahan arsitektur pada masanya.",
+      "p1": "Menelusuri Kampung Kemasan berarti menjelajahi lorong-lorong waktu — di mana bangunan kolonial yang masih terawat dengan baik berdiri tegak, kuliner lokal otentik menyambut setiap pengunjung, dan nuansa kejayaan masa silam hadir nyata di setiap sudut.",
+      "p2": "Kampung Kemasan Gresik adalah salah satu destinasi wisata paling ikonik di Jawa Timur. Dikenal dengan gaya arsitekturnya yang unik, kawasan ini menawarkan perpaduan harmonis antara pengaruh budaya Tionghoa, Arab, dan Jawa — sebuah cermin peradaban yang lahir dari jalur perdagangan berabad-abad lamanya."
+    },
+    "stats": {
+      "year_label": "Tahun Berdiri",
+      "culture_label": "Pengaruh Budaya Arsitektur",
+      "heritage_label": "Tahun Warisan Terjaga"
+    },
+    "history": {
+      "title": "Perjalanan Sejarah",
+      "item1_title": "Tahun 1855 — Asal-Usul Nama \"Kemasan\"",
+      "item1_desc": "Nama \"Kemasan\" diyakini berasal dari kata emas, merujuk pada para pedagang emas yang dahulu menetap dan berkembang di kawasan ini. Komunitas saudagar kaya ini menjadi fondasi awal bagi identitas budaya dan ekonomi kawasan.",
+      "item2_title": "Tahun 1896 — Industri Penyamakan Kulit H. Oemar Bin Achmad",
+      "item2_desc": "H. Oemar Bin Achmad mendirikan usaha penyamakan kulit di Kampung Kemasan — sebuah tonggak industri yang menggerakkan roda perekonomian kota Gresik. Dibantu para pengrajin Tionghoa yang bermukim di kawasan ini, usaha tersebut kemudian dikembangkan oleh kelima putra beliau.",
+      "item3_title": "Akhir Abad ke-19 — Era Bangunan Megah Para Saudagar",
+      "item3_desc": "Para pedagang kaya seperti H. Oemar Bin Achmad membangun rumah-rumah megah sebagai lambang kemakmuran dan status sosial. Bangunan-bangunan ini memadukan struktur kolonial Belanda, ornamen Tionghoa Peranakan, serta sentuhan kerajinan tradisional Jawa — menciptakan harmoni arsitektur yang tak tertandingi.",
+      "item4_title": "Hingga Kini — Kawasan Cagar Budaya yang Dilindungi",
+      "item4_desc": "Berkat kesadaran dan dedikasi masyarakat setempat, Kampung Kemasan berhasil bertahan di tengah arus modernisasi. Kini kawasan ini berdiri kokoh sebagai cagar budaya resmi kota Gresik, menghadirkan kembali keagungan masa lalu yang masih bisa dinikmati oleh setiap pengunjung."
+    },
+    "cultures": {
+      "chinese_title": "Tionghoa",
+      "chinese_desc": "Ornamen Peranakan — ukiran halus, warna merah-emas, dan dekorasi khas Cina Peranakan yang menjadi penanda identitas komunitas pedagang Tionghoa yang pernah menetap di sini.",
+      "dutch_title": "Kolonial Belanda",
+      "dutch_desc": "Struktur Eropa — pilar-pilar kokoh, jendela tinggi berpanel kaca, dan tata ruang bergaya Eropa abad ke-19 yang mencerminkan pengaruh kuat era kolonial dalam lanskap urban Gresik.",
+      "javanese_title": "Jawa",
+      "javanese_desc": "Kerajinan Tradisional — sentuhan motif batik, ukiran kayu bergaya Jawa, dan filosofi ruang yang berakar pada kearifan lokal — menjadikan setiap bangunan sebagai ekspresi identitas budaya Nusantara."
+    },
+    "vision_mission": {
+      "vision_title": "Visi Kami",
+      "vision_desc": "Melestarikan Kampung Kemasan sebagai simbol kerukunan multikultural dan kebanggaan sejarah di Gresik.",
+      "mission_title": "Misi Kami",
+      "mission1": "Melestarikan arsitektur bersejarah",
+      "mission2": "Mengembangkan edukasi dan pemahaman bagi generasi mendatang",
+      "mission3": "Mendorong pengembangan pariwisata berbasis warisan budaya yang berkelanjutan"
+    },
+    "closing_quote": "\"Lebih dari sekadar bangunan tua, Kampung Kemasan adalah warisan yang hidup.\"",
+    "contact": "Hubungi Kami"
+  },
+  "explore": {
+    "title": "Jelajahi",
+    "subtitle": "Kampung Kemasan",
+    "description": "Pilih menu di bawah untuk melihat panduan lengkap perjalanan, tempat menarik, hingga akomodasi di sekitar kota lama Gresik.",
+    "tabs": {
+      "transportation": {
+        "title": "Transportasi",
+        "desc": "Akses dari berbagai kota dan pilihan transportasi."
+      },
+      "activities": {
+        "title": "Aktivitas",
+        "desc": "Workshop, walking tour, dan spot foto heritage."
+      },
+      "culinary": {
+        "title": "Kuliner",
+        "desc": "Cita rasa otentik Gresik dan tempat nongkrong."
+      },
+      "accommodation": {
+        "title": "Akomodasi",
+        "desc": "Penginapan heritage hemat & nyaman."
+      }
+    },
+    "transportation": {
+      "heading": "Akses & Peta Lokasi",
+      "description": "Kampung Kemasan terletak strategis di pusat Kota Gresik, sehingga mudah dijangkau dari berbagai kota di sekitarnya. Lokasinya hanya sekitar <strong>20 kilometer dari Surabaya</strong> dan sekitar <strong>145 kilometer dari Malang</strong>.",
+      "by_car": {
+        "title": "Dengan Mobil",
+        "step1": "Dari Surabaya: Ambil jalur tol Surabaya-Gresik",
+        "step2": "Ikuti petunjuk arah menuju pusat Kota Gresik",
+        "step3": "Tiba dalam waktu sekitar 40-50 menit",
+        "step4": "Area parkir tersedia di sekitar lokasi"
+      },
+      "by_bus": {
+        "title": "Dengan Bus",
+        "step1": "Dari terminal Bungurasih ke Gresik",
+        "step2": "Gunakan Bus Transjatim (Rp 5.000 - Rp 15.000)",
+        "step3": "Tiba dalam 40-50 menit (turun halte Transjatim)"
+      },
+      "by_train": {
+        "title": "Dengan Kereta",
+        "step1": "Perjalanan menuju stasiun di Surabaya",
+        "step2": "Lanjutkan ke Gresik dengan mobil / transportasi online"
+      },
+      "by_plane": {
+        "title": "Dari Bandara Juanda",
+        "step1": "Taksi / transportasi online (sekitar 1 jam)",
+        "step2": "Atau shuttle bandara ke Surabaya, lanjut ke Gresik"
+      },
+      "local_transport": {
+        "title": "Transportasi Wisata Lokal",
+        "desc": "Pilihan kendaraan untuk berkeliling area Kampung Kemasan:",
+        "opt1": "Dokar (Kereta Kuda)",
+        "opt2": "Becak",
+        "opt3": "Bus Macito Gresik",
+        "opt4": "Bus Susun (Bandar Grisse)"
+      }
+    },
+    "activities": {
+      "heading": "Aktivitas di Kampung Kemasan",
+      "description": "Jangan sia-siakan waktu kalau belum mencoba berbagai kegiatan menarik dan mengabadikan momen di sekitar kawasan heritage ini!",
+      "exploration": {
+        "title": "Kegiatan Eksplorasi",
+        "item1": "Workshop Kerajinan Lokal",
+        "item2": "Walking Tour Kawasan Heritage",
+        "item3": "Keliling Kota Lama (Bus Macito)"
+      },
+      "documentation": {
+        "title": "Dokumentasi Estetik",
+        "item1": "Swafoto di Arsitektur Klasik",
+        "item2": "Video Blogging (Vlog)",
+        "item3": "Sesi Foto Pre-wedding"
+      },
+      "cta": "Lihat Event Mendatang"
+    },
+    "culinary": {
+      "heading": "Eksplorasi Rasa & Budaya",
+      "description": "Setelah menjelajahi keindahan jalan-jalan bersejarah, lanjutkan perjalanan dengan menikmati beragam kuliner khas. Mulai dari hidangan gurih hingga camilan manis tradisional.",
+      "popular": {
+        "title": "Makanan Populer",
+        "item1_title": "Nasi Krawu",
+        "item1_desc": "Suwiran daging sapi lezat dengan sambal pedas khas.",
+        "item2_title": "Otak-otak Bandeng",
+        "item2_desc": "Olahan ikan unik dengan bumbu kaya rasa.",
+        "item3_title": "Pudak",
+        "item3_desc": "Camilan manis tradisional dari tepung beras & santan."
+      },
+      "souvenir": {
+        "title": "Oleh-oleh Ikonik",
+        "item_title": "Batik Gajah Mungkur",
+        "item_desc": "Batik khas Gresik yang dibuat di rumah warisan budaya Gajah Mungkur peninggalan H. Oemar, dekat Kampung Kemasan."
+      },
+      "hangout": {
+        "title": "Tempat Nongkrong"
+      }
+    },
+    "accommodation": {
+      "heading": "Tempat Menginap",
+      "description": "Bagi Anda yang merencanakan singgah lebih lama untuk eksplorasi, terdapat pilihan penginapan praktis yang sarat nilai sejarah.",
+      "recommendation": "Rekomendasi",
+      "per_night": "/ malam",
+      "desc1": "Dikenal sebagai salah satu hotel tertua di area ini, The Bahagia Hotel menjadi akomodasi terdekat dari Kampung Kemasan.",
+      "desc2": "Hotel ini sangat populer di kalangan solo traveler dan backpacker. Dengan suasana sederhana, ramah di kantong, dan nyaman, penginapan ini adalah pilihan ideal bagi wisatawan yang mengutamakan efisiensi istirahat setelah seharian berjalan-jalan di kawasan heritage Gresik."
+    }
+  },
+  "collection": {
+    "badge": "Koleksi rumah\nwarisan",
+    "intro": {
+      "title": "Koleksi Rumah Warisan Di\nKampung Kemasan",
+      "description": "Berlokasi di Kabupaten Gresik, Jawa Timur, Kampung Kemasan Gresik merupakan salah satu destinasi wisata yang paling ikonik di daerah tersebut. Kampung ini dikenal dengan gaya arsitekturnya yang unik dan cukup berbeda dari beberapa bangunan era kolonial pada umumnya. Bagian arsitektur yang ada di Kampung Kemasan terpengaruh dari budaya Tionghoa atau Cina, Belanda, dan Jawa."
+    },
+    "features": {
+      "fake_window": {
+        "title": "Fitur Unik Struktural\n(Jendela Tipuan)",
+        "badge": "Jendela Tipuan",
+        "description": "Jendela tipuan yang terdapat pada rumah-rumah di kawasan Kampung kemasan menjadi salah satu ciri khas arsitektur yang unik dan menarik. Sekilas, jendela tersebut tampak seperti jendela pada umumnya, ternyata itu hanya ornamen rumah. Desain ini dibuat sebagai bagian dari sistem keamanan rumah untuk mengelabui pencuri, sehingga mereka kesulitan menemukan jalan keluar saat memasuki bangunan. Selain memiliki fungsi keamanan, keberadaan jendela tipuan ini juga menambah nilai historis dan keunikan arsitektur heritage di Kampung Kemasan."
+      },
+      "architecture": {
+        "title": "Langit-Langit Tinggi & Jendela Besar",
+        "description": "Dirancang khusus untuk iklim tropis, rumah-rumah ini tetap sejuk secara alami dengan sirkulasi udara yang optimal, dan nyaman tanpa perlu pendingin modern. Ubin Impor & Detail Besi Artistik Sentuhan elegan hadir melalui ubin keramik Eropa dan ornamen besi cor yang didatangkan langsung pada masa kolonial, memperkuat nilai sejarahnya. Simetri & Warna yang Menawan Perpaduan bentuk simetris dan warna-warna cerah menjadikan Kampung Kemasan tampil berbeda—anggun, hidup, dan penuh karakter."
+      }
+    },
+    "gajah_mungkur": {
+      "badge": "Gajah Mungkur",
+      "modal_title": "Sejarah Gajah Mungkur",
+      "p1": "Kampung Kemasan di Gresik merupakan salah satu kawasan bersejarah yang memiliki banyak cerita tentang perkembangan budaya dan kehidupan masyarakat pada masa lampau. Salah satu bangunan yang memiliki keterkaitan erat dengan sejarah Kampung Kemasan adalah Rumah Gajah Mungkur. Rumah ini menjadi bagian penting dari jejak sejarah keluarga besar yang pernah tinggal dan berkembang di kawasan tersebut.",
+      "p2": "Keterkaitan Rumah Gajah Mungkur dengan Kampung Kemasan dapat dilihat dari garis keturunan pemiliknya. Di Kampung Kemasan terdapat keturunan H. Oemar bin Achmad, seorang pengrajin kain dari sarang kulit walet yang terkenal pada masanya karena keahlian dan usahanya yang cukup dikenal masyarakat. Dari keluarga inilah kemudian lahir Rumah Gajah Mungkur yang didirikan oleh anak keempat beliau, yaitu Abdoel Rachmad atau yang juga dikenal dengan nama H. D. Jaelan.",
+      "p3": "Rumah Gajah Mungkur didirikan pada tahun 1896 dan berlokasi di Jalan Nyai Ageng Arem-Arem No. 38, Kabupaten Gresik, Jawa Timur. Letaknya yang tidak jauh dari Kampung Kemasan menunjukkan adanya hubungan sejarah dan keluarga yang erat antara kedua tempat tersebut. Hingga saat ini, Rumah Gajah Mungkur masih menjadi salah satu bangunan bersejarah yang memiliki nilai budaya dan menjadi pengingat perkembangan masyarakat Gresik pada masa lalu.",
+      "p4": "Selain dikenal sebagai bangunan bersejarah, Rumah Gajah Mungkur juga memiliki usaha keluarga yang terus dilestarikan hingga generasi ketiga. Salah satu produk yang paling terkenal adalah Batik Gajah Mungkur, yaitu batik khas yang menjadi identitas dan warisan budaya keluarga tersebut. Keberadaan batik ini tidak hanya menjadi bagian dari usaha keluarga, tetapi juga turut memperkenalkan kekayaan budaya lokal Gresik."
+    }
   },
   "footer": {
-    "description": "Dedikasi untuk pelestarian arsip budaya dan keagungan arsitektur nusantara. Merawat memori, membangun masa depan.",
+    "description": "Didedikasikan untuk pelestarian arsip budaya dan kemegahan arsitektur Nusantara. Merawat ingatan, membangun masa depan.",
     "explore": "Jelajahi",
     "organization": "Organisasi",
     "office": "Kantor",
-    "copyright": "Hak cipta dilindungi. Dibuat dengan bangga."
+    "copyright": "Hak cipta dilindungi undang-undang. Dibuat dengan bangga."
   }
 }
