@@ -185,6 +185,8 @@ const Spotlight = () => {
                     src={video.image}
                     alt={video.title}
                     fill
+                    sizes="w-full h-full"
+                    loading="eager"
                     className="object-cover opacity-60 group-hover:opacity-40 transition-opacity duration-300"
                   />
 
