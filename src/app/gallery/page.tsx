@@ -316,7 +316,7 @@ const Koleksi = () => {
                 <div className="absolute -bottom-6 -right-4 md:-right-8 z-20">
                   <div className="bg-[#A13312] py-4 px-8 rounded-2xl text-center shadow-[8px_8px_0px_0px_rgba(0,0,0,0.15)] border-2 border-white">
                     <span className="font-bold tracking-[0.3em] uppercase text-sm md:text-base text-[#FCE195]">
-                      Trailing
+                      {t("collection.features.trailing.badge")}
                     </span>
                   </div>
                 </div>
@@ -328,13 +328,11 @@ const Koleksi = () => {
                 <div className="w-12 h-1.5 bg-[#A13312] mb-6 rounded-full"></div>
 
                 <h1 className="text-3xl md:text-4xl font-black uppercase leading-tight tracking-tighter text-zinc-900 mb-6">
-                  Arsitektur & Fasad Ornamental Yang Memikat
+                  {t("collection.features.trailing.title")}
                 </h1>
 
                 <p className="text-zinc-600 text-base md:text-lg leading-loose text-justify font-medium">
-                  Ukiran detail berupa bunga, makhluk mitologi, dan pola
-                  geometris menghiasi jendela serta balkon, menciptakan tampilan
-                  yang kaya akan seni dan cerita masa lalu.
+                  {t("collection.features.trailing.description")}
                 </p>
               </div>
             </div>
