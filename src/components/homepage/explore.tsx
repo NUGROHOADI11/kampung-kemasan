@@ -320,7 +320,7 @@ export default function Explore() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 flex-1 overflow-y-auto custom-scrollbar pb-2">
-              {activitiesList.map((act: any, index: number) => {
+              {activitiesList.map((act: { title: string; short: string; full: string }, index: number) => {
                 const Icon = actIcons[index % actIcons.length];
                 return (
                   <div
@@ -508,7 +508,7 @@ export default function Explore() {
             </div>
 
             <div className="grid grid-cols-1 gap-4 flex-1 overflow-y-auto custom-scrollbar pb-2">
-              {hotelsList.map((hotel: any, index: number) => (
+              {hotelsList.map((hotel: { name: string; price: string; desc1: string; desc2: string; desc3: string }, index: number) => (
                 <div
                   key={index}
                   className="bg-zinc-50 rounded-2xl p-4 border border-zinc-100 flex flex-col md:flex-row gap-4 items-start"

@@ -1,481 +1,404 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState } from "react";
+import Image from "next/image";
 import { useTranslation } from "react-i18next";
-import Link from "next/link";
-import {
-  FaCamera,
-  FaMapMarkedAlt,
-  FaUtensils,
-  FaBed,
-  FaCar,
-  FaBus,
-  FaTrain,
-  FaPlane,
-  FaBicycle,
-  FaShoppingBag,
-  FaCoffee,
-  FaCheckCircle,
-  FaMapMarkerAlt,
-  FaArrowRight,
-} from "react-icons/fa";
+import Rumah1 from "../../../public/assets/images/history.webp";
+import Rumah2 from "../../../public/assets/images/rumah2.webp";
+import Rumah3 from "../../../public/assets/images/rumah3.webp";
+import Jendela from "../../../public/assets/images/jendela.webp";
+import GaleryImg1 from "../../../public/assets/images/gallery1.webp";
+import GaleryImg2 from "../../../public/assets/images/gallery2.webp";
+import GaleryImg3 from "../../../public/assets/images/gallery3.webp";
+import GaleryImg4 from "../../../public/assets/images/gallery4.webp";
+import GajahMungkur from "../../../public/assets/images/history2.png";
+import LangitLangit from "../../../public/assets/images/langit-langit.webp";
+import Trailing from "../../../public/assets/images/trailing.webp";
 
-const exploreTabs = [
-  { id: "transportation", icon: FaMapMarkedAlt },
-  { id: "activities", icon: FaCamera },
-  { id: "culinary", icon: FaUtensils },
-  { id: "accommodation", icon: FaBed },
+import { FaArrowCircleRight, FaTimes } from "react-icons/fa";
+
+const CircleArrow = ({ bgClass = "bg-white", arrowClass = "text-black" }) => (
+  <div
+    className={`${bgClass} rounded-full p-2 flex items-center justify-center shrink-0 shadow-md w-10 h-10`}
+  >
+    <svg
+      className={`w-6 h-6 ${arrowClass}`}
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      strokeWidth={3}
+    >
+      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+    </svg>
+  </div>
+);
+
+const GalleryImage = [
+  { src: GaleryImg1, alt: "Gallery Image 1" },
+  { src: GaleryImg2, alt: "Gallery Image 2" },
+  { src: GaleryImg3, alt: "Gallery Image 3" },
+  { src: GaleryImg4, alt: "Gallery Image 4" },
 ];
 
-export default function Explore() {
+const Koleksi = () => {
   const { t } = useTranslation();
-  const [activeExplore, setActiveExplore] = useState("transportation");
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const renderContent = () => {
-    switch (activeExplore) {
-      case "transportation":
-        return (
-          <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
-            <div>
-              <h3 className="text-2xl font-bold text-[#8B2615] mb-3">
-                {t("explore.transportation.heading")}
-              </h3>
-              <p
-                className="text-zinc-600 leading-relaxed"
-                dangerouslySetInnerHTML={{
-                  __html: t("explore.transportation.description"),
-                }}
-              />
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="bg-zinc-50 p-5 rounded-2xl border border-zinc-100">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="bg-[#8B2615] p-2 rounded-lg text-white">
-                    <FaCar />
-                  </div>
-                  <h4 className="font-bold text-zinc-800">
-                    {t("explore.transportation.by_car.title")}
-                  </h4>
-                </div>
-                <ul className="text-sm text-zinc-600 space-y-2">
-                  <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />
-                    {t("explore.transportation.by_car.step1")}
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />
-                    {t("explore.transportation.by_car.step2")}
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />
-                    {t("explore.transportation.by_car.step3")}
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />
-                    {t("explore.transportation.by_car.step4")}
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-zinc-50 p-5 rounded-2xl border border-zinc-100">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="bg-[#8B2615] p-2 rounded-lg text-white">
-                    <FaBus />
-                  </div>
-                  <h4 className="font-bold text-zinc-800">
-                    {t("explore.transportation.by_bus.title")}
-                  </h4>
-                </div>
-                <ul className="text-sm text-zinc-600 space-y-2">
-                  <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />
-                    {t("explore.transportation.by_bus.step1")}
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />
-                    {t("explore.transportation.by_bus.step2")}
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />
-                    {t("explore.transportation.by_bus.step3")}
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-zinc-50 p-5 rounded-2xl border border-zinc-100">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="bg-[#8B2615] p-2 rounded-lg text-white">
-                    <FaTrain />
-                  </div>
-                  <h4 className="font-bold text-zinc-800">
-                    {t("explore.transportation.by_train.title")}
-                  </h4>
-                </div>
-                <ul className="text-sm text-zinc-600 space-y-2">
-                  <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />
-                    {t("explore.transportation.by_train.step1")}
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />
-                    {t("explore.transportation.by_train.step2")}
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-zinc-50 p-5 rounded-2xl border border-zinc-100">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="bg-[#8B2615] p-2 rounded-lg text-white">
-                    <FaPlane />
-                  </div>
-                  <h4 className="font-bold text-zinc-800">
-                    {t("explore.transportation.by_plane.title")}
-                  </h4>
-                </div>
-                <ul className="text-sm text-zinc-600 space-y-2">
-                  <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />
-                    {t("explore.transportation.by_plane.step1")}
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <FaCheckCircle className="text-[#8B2615] mt-1 shrink-0" />
-                    {t("explore.transportation.by_plane.step2")}
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div>
-              <h4 className="font-bold text-lg text-[#8B2615] mb-4 flex items-center gap-2">
-                <FaBicycle />{" "}
-                {t("explore.transportation.local_transport.title")}
-              </h4>
-              <p className="text-sm text-zinc-600 mb-3">
-                {t("explore.transportation.local_transport.desc")}
-              </p>
-              <div className="flex flex-wrap gap-3 mb-6">
-                <span className="px-4 py-2 bg-white border border-zinc-200 rounded-full text-sm font-medium text-zinc-700 shadow-sm">
-                  {t("explore.transportation.local_transport.opt1")}
-                </span>
-                <span className="px-4 py-2 bg-white border border-zinc-200 rounded-full text-sm font-medium text-zinc-700 shadow-sm">
-                  {t("explore.transportation.local_transport.opt2")}
-                </span>
-                <span className="px-4 py-2 bg-white border border-zinc-200 rounded-full text-sm font-medium text-zinc-700 shadow-sm">
-                  {t("explore.transportation.local_transport.opt3")}
-                </span>
-                <span className="px-4 py-2 bg-white border border-zinc-200 rounded-full text-sm font-medium text-zinc-700 shadow-sm">
-                  {t("explore.transportation.local_transport.opt4")}
-                </span>
-              </div>
-              <p
-                className="text-sm text-zinc-600 leading-relaxed bg-zinc-100 p-4 rounded-xl"
-                dangerouslySetInnerHTML={{
-                  __html: t("explore.transportation.local_transport.bus_info"),
-                }}
-              />
-            </div>
-          </div>
-        );
-
-      case "activities":
-        return (
-          <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
-            <div>
-              <h3 className="text-2xl font-bold text-[#8B2615] mb-3">
-                {t("explore.activities.heading")}
-              </h3>
-              <p className="text-zinc-600 leading-relaxed">
-                {t("explore.activities.description")}
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <div className="bg-white p-6 rounded-3xl border border-zinc-100 shadow-sm">
-                <h4 className="font-bold text-lg text-zinc-800 mb-4 border-b pb-2">
-                  {t("explore.activities.exploration.title")}
-                </h4>
-                <ul className="space-y-4">
-                  <li className="flex items-start gap-3 text-zinc-600">
-                    <div className="p-2 bg-orange-100 text-orange-600 rounded-lg mt-1 shrink-0">
-                      <FaUtensils />
-                    </div>
-                    <span className="font-medium">
-                      {t("explore.activities.exploration.item1")}
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3 text-zinc-600">
-                    <div className="p-2 bg-blue-100 text-blue-600 rounded-lg mt-1 shrink-0">
-                      <FaMapMarkedAlt />
-                    </div>
-                    <span className="font-medium">
-                      {t("explore.activities.exploration.item2")}
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3 text-zinc-600">
-                    <div className="p-2 bg-emerald-100 text-emerald-600 rounded-lg mt-1 shrink-0">
-                      <FaBus />
-                    </div>
-                    <span className="font-medium text-sm">
-                      {t("explore.activities.exploration.item3")}
-                    </span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-white p-6 rounded-3xl border border-zinc-100 shadow-sm">
-                <h4 className="font-bold text-lg text-zinc-800 mb-4 border-b pb-2">
-                  {t("explore.activities.documentation.title")}
-                </h4>
-                <ul className="space-y-4">
-                  <li className="flex items-start gap-3 text-zinc-600">
-                    <div className="p-2 bg-pink-100 text-pink-600 rounded-lg mt-1 shrink-0">
-                      <FaCamera />
-                    </div>
-                    <span className="font-medium">
-                      {t("explore.activities.documentation.item1")}
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3 text-zinc-600">
-                    <div className="p-2 bg-purple-100 text-purple-600 rounded-lg mt-1 shrink-0">
-                      <FaCamera />
-                    </div>
-                    <span className="font-medium">
-                      {t("explore.activities.documentation.item2")}
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3 text-zinc-600">
-                    <div className="p-2 bg-rose-100 text-rose-500 rounded-lg mt-1 shrink-0">
-                      <FaCamera />
-                    </div>
-                    <span className="font-medium">
-                      {t("explore.activities.documentation.item3")}
-                    </span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="flex justify-end pt-2">
-              <Link
-                href="/event"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-[#8B2615] text-white font-semibold rounded-full shadow-sm hover:bg-[#731f11] transition-all duration-300 group"
-              >
-                {t("explore.activities.cta")}
-                <FaArrowRight className="transform group-hover:translate-x-1 transition-transform duration-300" />
-              </Link>
-            </div>
-          </div>
-        );
-
-      case "culinary":
-        return (
-          <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
-            <div>
-              <h3 className="text-2xl font-bold text-[#8B2615] mb-3">
-                {t("explore.culinary.heading")}
-              </h3>
-              <p className="text-zinc-600 leading-relaxed">
-                {t("explore.culinary.description")}
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-              <div className="bg-zinc-50 p-5 rounded-2xl border border-zinc-100">
-                <div className="text-[#8B2615] mb-3">
-                  <FaUtensils size={24} />
-                </div>
-                <h4 className="font-bold text-zinc-800 mb-3">
-                  {t("explore.culinary.popular.title")}
-                </h4>
-                <ul className="text-sm text-zinc-600 space-y-4">
-                  <li>
-                    <strong>{t("explore.culinary.popular.item1_title")}</strong>{" "}
-                    <br />
-                    {t("explore.culinary.popular.item1_desc")}
-                  </li>
-                  <li>
-                    <strong>{t("explore.culinary.popular.item2_title")}</strong>{" "}
-                    <br />
-                    {t("explore.culinary.popular.item2_desc")}
-                  </li>
-                  <li>
-                    <strong>{t("explore.culinary.popular.item3_title")}</strong>{" "}
-                    <br />
-                    {t("explore.culinary.popular.item3_desc")}
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-zinc-50 p-5 rounded-2xl border border-zinc-100">
-                <div className="text-[#8B2615] mb-3">
-                  <FaShoppingBag size={24} />
-                </div>
-                <h4 className="font-bold text-zinc-800 mb-3">
-                  {t("explore.culinary.souvenir.title")}
-                </h4>
-                <div className="text-sm text-zinc-600">
-                  <p className="font-bold text-zinc-800 mb-2">
-                    {t("explore.culinary.souvenir.item_title")}
-                  </p>
-                  <p>{t("explore.culinary.souvenir.item_desc")}</p>
-                </div>
-              </div>
-
-              <div className="bg-zinc-50 p-5 rounded-2xl border border-zinc-100 md:col-span-2 xl:col-span-1">
-                <div className="text-[#8B2615] mb-3">
-                  <FaCoffee size={24} />
-                </div>
-                <h4 className="font-bold text-zinc-800 mb-3">
-                  {t("explore.culinary.hangout.title")}
-                </h4>
-                <div className="text-sm text-zinc-600 space-y-4">
-                  <p>{t("explore.culinary.hangout.desc")}</p>
-                  <ul className="space-y-2 mt-4 font-semibold">
-                    <li className="flex items-center gap-2">
-                      <FaMapMarkerAlt className="text-[#8B2615]" />{" "}
-                      {t("explore.culinary.hangout.p1")}
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <FaMapMarkerAlt className="text-[#8B2615]" />{" "}
-                      {t("explore.culinary.hangout.p2")}
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <FaMapMarkerAlt className="text-[#8B2615]" />{" "}
-                      {t("explore.culinary.hangout.p3")}
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        );
-
-      case "accommodation":
-        const fetchedHotels = t("explore.accommodation.hotels", {
-          returnObjects: true,
-        });
-        const hotelsList = Array.isArray(fetchedHotels) ? fetchedHotels : [];
-
-        return (
-          <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
-            <div>
-              <h3 className="text-2xl font-bold text-[#8B2615] mb-3">
-                {t("explore.accommodation.heading")}
-              </h3>
-              <p className="text-zinc-600 leading-relaxed">
-                {t("explore.accommodation.description")}
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 gap-6">
-              {hotelsList.map((hotel, index) => (
-                <div
-                  key={index}
-                  className="bg-zinc-50 rounded-3xl p-6 lg:p-8 border border-zinc-100 flex flex-col gap-6"
-                >
-                  <div className="space-y-4">
-                    {index === 0 && (
-                      <div className="inline-block bg-green-100 text-green-700 font-bold px-3 py-1 rounded-full text-xs tracking-wider uppercase mb-1">
-                        {t("explore.accommodation.recommendation")}
-                      </div>
-                    )}
-                    <h4 className="text-3xl font-extrabold text-zinc-800">
-                      {hotel.name}
-                    </h4>
-                    <p className="text-2xl font-semibold text-[#8B2615]">
-                      {hotel.price}{" "}
-                      <span className="text-sm text-zinc-400 font-normal">
-                        {t("explore.accommodation.per_night")}
-                      </span>
-                    </p>
-                    <div className="h-px w-full bg-zinc-200 my-4" />
-                    <p className="text-zinc-600 leading-relaxed">
-                      {hotel.desc1}
-                      <br />
-                      <br />
-                      {hotel.desc2}
-                      <br />
-                      <br />
-                      {hotel.desc3}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        );
-      default:
-        return null;
-    }
+  const renderBadge = () => {
+    const badgeText = t("collection.badge", {
+      defaultValue: "Koleksi rumah\nwarisan",
+    }).split("\n");
+    return (
+      <span className="font-dancing-script italic text-3xl md:text-4xl text-[#78594d] drop-shadow-sm whitespace-pre-line leading-[0.8]">
+        {badgeText[0]}
+        {"\n"}
+        <span className="ml-8">{badgeText[1]}</span>
+      </span>
+    );
   };
 
   return (
-    <section className="py-20 px-4 md:px-8 bg-zinc-50 min-h-screen">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-6 md:gap-10">
-        <div className="w-full lg:w-1/3 xl:w-[30%] flex flex-col gap-4 lg:gap-6 shrink-0">
-          <div className="text-center lg:text-left mb-2 lg:mb-0">
-            <h2 className="text-3xl font-black tracking-tighter uppercase leading-none text-[#8B2615]">
-              {t("explore.title")} <br className="hidden lg:block" />
-              <span className="text-zinc-800 text-2xl">
-                {t("explore.subtitle")}
-              </span>
-            </h2>
-            <p className="text-zinc-500 text-sm mt-2 lg:mt-3 leading-relaxed hidden lg:block">
-              {t("explore.description")}
-            </p>
+    <div className="w-full bg-[#F8F9FA] overflow-hidden font-sans pb-20 relative">
+      {isModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-in fade-in duration-200">
+          <div className="bg-white rounded-3xl shadow-2xl w-full max-w-3xl max-h-[85vh] flex flex-col relative animate-in zoom-in-95 duration-200">
+            <div className="flex justify-between items-center p-6 border-b border-gray-100">
+              <h2 className="text-xl font-bold uppercase text-[#A63011] tracking-wider">
+                {t("collection.gajah_mungkur.modal_title")}
+              </h2>
+              <button
+                onClick={() => setIsModalOpen(false)}
+                className="text-gray-400 hover:text-gray-800 transition-colors bg-gray-100 hover:bg-gray-200 rounded-full p-2 focus:outline-none"
+              >
+                <FaTimes size={20} />
+              </button>
+            </div>
+            <div className="p-6 md:p-8 overflow-y-auto space-y-4">
+              <p className="text-zinc-800 text-base leading-loose text-justify font-medium">
+                {t("collection.gajah_mungkur.p1")}
+              </p>
+              <p className="text-zinc-800 text-base leading-loose text-justify font-medium">
+                {t("collection.gajah_mungkur.p2")}
+              </p>
+              <p className="text-zinc-800 text-base leading-loose text-justify font-medium">
+                {t("collection.gajah_mungkur.p3")}
+              </p>
+              <p className="text-zinc-800 text-base leading-loose text-justify font-medium">
+                {t("collection.gajah_mungkur.p4")}
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <section className="relative w-full max-w-6xl mx-auto px-4 mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 justify-center items-start mx-auto max-w-3xl">
+          <div className="flex flex-col rounded-b-4xl overflow-hidden shadow-xl">
+            <div className="relative w-full h-64 md:h-96">
+              <Image
+                src={Rumah1}
+                alt="House Type 1"
+                fill
+                sizes="h-full w-full"
+                className="object-cover"
+              />
+            </div>
+            <div className="bg-[#FDF2CB] h-36 md:h-40 flex pb-6 items-end justify-center">
+              <CircleArrow bgClass="bg-[#A13312]" arrowClass="text-[#FDF2CB]" />
+            </div>
           </div>
 
-          <div className="grid grid-cols-4 gap-2 md:gap-4 lg:flex lg:flex-col lg:gap-3">
-            {exploreTabs.map((tab) => {
-              const isActive = activeExplore === tab.id;
-              return (
-                <button
-                  key={tab.id}
-                  onClick={() => setActiveExplore(tab.id)}
-                  className={`relative p-2 lg:p-4 rounded-2xl border transition-all duration-300 flex items-center justify-center lg:justify-start lg:gap-4 text-left group overflow-hidden
-                    ${
-                      isActive
-                        ? "bg-[#8B2615] border-[#8B2615] shadow-lg shadow-[#8B2615]/20 lg:scale-[1.02]"
-                        : "bg-white border-zinc-200 shadow-sm hover:border-[#8B2615]/30 hover:bg-zinc-50"
-                    }`}
-                >
-                  <div
-                    className={`p-3 lg:p-4 rounded-xl transition-colors duration-300 shrink-0 ${
-                      isActive
-                        ? "bg-white/20 text-white"
-                        : "bg-zinc-100 text-[#8B2615] group-hover:bg-[#8B2615]/10"
-                    }`}
-                  >
-                    <tab.icon className="text-2xl" />
-                  </div>
+          <div className="flex flex-col rounded-b-4xl overflow-hidden shadow-xl">
+            <div className="relative w-full h-64 md:h-96">
+              <Image
+                src={Rumah2}
+                alt="House Type 2"
+                fill
+                sizes="h-full w-full"
+                className="object-cover object-center"
+              />
+            </div>
 
-                  <div className="hidden lg:block">
-                    <span
-                      className={`block text-base font-extrabold uppercase tracking-wide transition-colors ${
-                        isActive ? "text-white" : "text-zinc-800"
-                      }`}
-                    >
-                      {t(`explore.tabs.${tab.id}.title`)}
+            <div className="bg-[#A13312] h-28 md:h-32 flex pb-6 items-end justify-center">
+              <CircleArrow bgClass="bg-white" arrowClass="text-[#A13312]" />
+            </div>
+          </div>
+
+          <div className="relative flex flex-col rounded-b-4xl overflow-visible shadow-xl">
+            <div className="relative w-full h-64 md:h-96">
+              <Image
+                src={Rumah3}
+                alt="House Type 3"
+                fill
+                sizes="h-full w-full"
+                className="object-cover"
+              />
+            </div>
+            <div className="bg-[#F0BB51] h-20 md:h-20 flex pb-6 items-end justify-center rounded-b-4xl">
+              <CircleArrow bgClass="bg-white" arrowClass="text-[#F0BB51]" />
+            </div>
+
+            <div className="absolute -bottom-6 -right-4 md:-right-24 z-20 transform rotate-[-5deg]">
+              {renderBadge()}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative w-full max-w-6xl mx-auto px-4 md:px-8 mb-24 z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="relative">
+            <div className="absolute -top-12 -left-2 md:-left-6 z-20 transform rotate-[-5deg]">
+              {renderBadge()}
+            </div>
+
+            <div className="bg-white rounded-4xl p-8 md:p-10 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.1)] relative z-10">
+              <h1 className="text-2xl md:text-[1.6rem] font-black uppercase leading-tight tracking-tight text-black mb-6 whitespace-pre-line">
+                {t("collection.intro.title")}
+              </h1>
+              <p className="text-gray-700 text-sm md:text-base leading-loose text-justify font-medium">
+                {t("collection.intro.description")}
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4 md:gap-6">
+            {GalleryImage.map((image, index) => (
+              <div
+                key={index}
+                className="relative aspect-4/3 rounded-3xl overflow-hidden shadow-lg bg-white"
+              >
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  sizes="h-full w-full"
+                  className="object-cover rounded-3xl"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="relative w-full pt-16 pb-16 overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none">
+          <div
+            className="absolute inset-0 bg-[radial-gradient(#444_1px,transparent_1px)] bg-size-[5px_5px] opacity-30"
+            style={{
+              maskImage:
+                "linear-gradient(to bottom, black 0%, transparent 90%)",
+              WebkitMaskImage:
+                "linear-gradient(to bottom, black 0%, transparent 90%)",
+            }}
+          ></div>
+        </div>
+
+        <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="bg-white rounded-4xl p-8 md:p-10 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.1)]">
+              <h1 className="text-2xl md:text-[1.6rem] font-black uppercase leading-tight tracking-tight text-black mb-6 whitespace-pre-line">
+                {t("collection.features.fake_window.title")}
+              </h1>
+              <p className="text-gray-700 text-sm md:text-base leading-loose text-justify font-medium">
+                {t("collection.features.fake_window.description")}
+              </p>
+            </div>
+
+            <div className="relative flex justify-center items-center h-full">
+              <div className="w-full max-w-md flex flex-col rounded-4xl shadow-2xl relative">
+                <div className="absolute bottom-[30%] -right-6 md:-right-20 z-30 transform rotate-[-5deg]">
+                  {renderBadge()}
+                </div>
+
+                <div className="relative w-full aspect-4/5 rounded-t-4xl overflow-hidden bg-blue-100">
+                  <Image
+                    src={Jendela}
+                    alt="Jendela Tipuan"
+                    fill
+                    sizes="w-full h-full"
+                    className="object-cover"
+                  />
+                </div>
+
+                <div className="bg-[#A13312] text-white py-5 px-6 rounded-b-4xl w-full text-center z-10">
+                  <span className="font-bold tracking-[0.25em] uppercase text-sm md:text-base">
+                    {t("collection.features.fake_window.badge")}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative w-full pt-16 pb-16 overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none">
+          <div
+            className="absolute inset-0 bg-[radial-gradient(#444_1px,transparent_1px)] bg-size-[5px_5px] opacity-30"
+            style={{
+              maskImage:
+                "linear-gradient(to bottom, black 0%, transparent 90%)",
+              WebkitMaskImage:
+                "linear-gradient(to bottom, black 0%, transparent 90%)",
+            }}
+          ></div>
+        </div>
+
+        <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div className="relative flex justify-center items-center h-full">
+              <div className="w-full max-w-md flex flex-col rounded-4xl shadow-2xl relative">
+                <div className="absolute bottom-[30%] -right-6 md:-right-20 z-30 transform rotate-[-5deg]">
+                  {renderBadge()}
+                </div>
+
+                <div className="relative w-full aspect-4/5 rounded-t-4xl overflow-hidden bg-blue-100">
+                  <Image
+                    src={LangitLangit}
+                    alt="Langit-langit"
+                    fill
+                    sizes="w-full h-full"
+                    className="object-cover"
+                  />
+                </div>
+
+                <div className="bg-[#A13312] text-white py-5 px-6 rounded-b-4xl w-full text-center z-10">
+                  <span className="font-bold tracking-[0.25em] uppercase text-sm md:text-base">
+                    {t("collection.features.architecture.title")}
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white rounded-4xl p-8 md:p-10 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.1)]">
+              <h1 className="text-2xl md:text-[1.6rem] font-black uppercase leading-tight tracking-tight text-black mb-6">
+                {t("collection.features.architecture.title")}
+              </h1>
+              <p className="text-gray-700 text-sm md:text-base leading-loose text-justify font-medium">
+                {t("collection.features.architecture.description")}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative w-full pt-16 pb-24 overflow-hidden bg-transparent">
+        <div className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none">
+          <div
+            className="absolute inset-0 bg-[radial-gradient(#888_1px,transparent_1px)] bg-size-[12px_12px] opacity-20"
+            style={{
+              maskImage:
+                "linear-gradient(to bottom, black 0%, transparent 90%)",
+              WebkitMaskImage:
+                "linear-gradient(to bottom, black 0%, transparent 90%)",
+            }}
+          ></div>
+        </div>
+
+        <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-12 mt-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-12 items-center">
+            <div className="relative flex justify-center items-center h-full w-full max-w-md mx-auto lg:order-1 order-2">
+              <div className="relative w-full flex flex-col items-center">
+                <div className="absolute -top-10 -left-6 md:-left-12 z-30 transform -rotate-6">
+                  {renderBadge()}
+                </div>
+
+                <div className="relative w-full aspect-4/5 rounded-3xl overflow-hidden shadow-2xl border-4 border-white group">
+                  <Image
+                    src={Trailing}
+                    alt="Trailing Ornaments"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
+
+                <div className="absolute -bottom-6 -right-4 md:-right-8 z-20">
+                  <div className="bg-[#A13312] py-4 px-8 rounded-2xl text-center shadow-[8px_8px_0px_0px_rgba(0,0,0,0.15)] border-2 border-white">
+                    <span className="font-bold tracking-[0.3em] uppercase text-sm md:text-base text-[#FCE195]">
+                      {t("collection.features.trailing.badge")}
                     </span>
-                    <p
-                      className={`mt-1 text-xs line-clamp-2 transition-colors ${
-                        isActive ? "text-white/80" : "text-zinc-500"
-                      }`}
-                    >
-                      {t(`explore.tabs.${tab.id}.desc`)}
-                    </p>
                   </div>
-                </button>
-              );
-            })}
+                </div>
+              </div>
+            </div>
+
+            <div className="lg:order-2 order-1 relative">
+              <div className="bg-white/90 backdrop-blur-sm rounded-4xl p-8 md:p-10 shadow-[0_15px_40px_-10px_rgba(0,0,0,0.1)] border border-zinc-100 relative z-10">
+                <div className="w-12 h-1.5 bg-[#A13312] mb-6 rounded-full"></div>
+
+                <h1 className="text-3xl md:text-4xl font-black uppercase leading-tight tracking-tighter text-zinc-900 mb-6">
+                  {t("collection.features.trailing.title")}
+                </h1>
+
+                <p className="text-zinc-600 text-base md:text-lg leading-loose text-justify font-medium">
+                  {t("collection.features.trailing.description")}
+                </p>
+              </div>
+            </div>
           </div>
         </div>
+      </section>
 
-        <div className="flex-1 min-w-0 bg-white rounded-4xl border border-zinc-200 p-6 md:p-10 lg:p-12 shadow-xl shadow-zinc-200/40">
-          {renderContent()}
+      <section className="relative w-full pt-16 pb-24 overflow-hidden bg-gray-50">
+        <div className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none">
+          <div
+            className="absolute inset-0 bg-[radial-gradient(#888_1px,transparent_1px)] bg-size-[8px_8px] opacity-30"
+            style={{
+              maskImage:
+                "linear-gradient(to bottom, black 0%, transparent 90%)",
+              WebkitMaskImage:
+                "linear-gradient(to bottom, black 0%, transparent 90%)",
+            }}
+          ></div>
         </div>
-      </div>
-    </section>
+
+        <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-12 mt-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-12 items-center">
+            <div className="relative flex justify-center items-center h-full w-full max-w-md mx-auto">
+              <div className="relative w-full flex flex-col items-center">
+                <div className="relative w-full aspect-square md:aspect-4/5 rounded-3xl ">
+                  <Image
+                    src={GajahMungkur}
+                    alt="Rumah Gajah Mungkur"
+                    fill
+                    loading="eager"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-contain "
+                  />
+                </div>
+
+                <div className="absolute bottom-0 -left-4 -right-4 z-10">
+                  <div className="bg-[#A63011] py-4 px-6 rounded-xl w-full text-center shadow-[8px_8px_0px_0px_#5A5A5A]">
+                    <span className="font-extrabold tracking-[0.3em] uppercase text-xl md:text-2xl text-[#FCE195]">
+                      {t("collection.gajah_mungkur.badge")}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white rounded-3xl p-8 md:p-10 shadow-[0_15px_40px_-10px_rgba(0,0,0,0.15)] relative">
+              <div className="text-zinc-800 text-sm md:text-base leading-loose text-justify font-medium line-clamp-10 space-y-4">
+                <p>{t("collection.gajah_mungkur.p1")}</p>
+                <p>{t("collection.gajah_mungkur.p2")}</p>
+              </div>
+
+              <div className="flex justify-end mt-6">
+                <button
+                  onClick={() => setIsModalOpen(true)}
+                  aria-label="Read more about Gajah Mungkur"
+                  className="focus:outline-none"
+                >
+                  <FaArrowCircleRight className="text-4xl text-[#A63011] hover:text-[#8a270e] transition-colors cursor-pointer shadow-sm rounded-full" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
-}
+};
+
+export default Koleksi;
